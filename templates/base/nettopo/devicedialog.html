@@ -1,0 +1,38 @@
+<div class="dialog-content" id="$elementId$_addAsset" style="margin:13px 30px;">
+    <div class="row-cutcontent" style="padding:0;margin:0">
+            <div class="filter-box row">
+                <div class="col-sm-9 col-md-9">
+                    <div class="form-group">
+                        <b>设备类型：</b>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDeviceType" id="$elementId$_txtDeviceType" maxlength="64" placeholder="长度不超过64字节，支持中英文数字()-_" title="长度不超过64字节，支持中英文数字()-_" style="width:74%"/>
+                    </div>
+                </div>
+                <div class="col-sm-3 col-md-3" style="float: right">
+                    <button type="button" class="btn btn-primary" data-id="$elementId$_addDeviceType" id="$elementId$_addDeviceType">
+                        <i class="fa fa-plus"></i>添加
+                    </button>
+                </div>
+            </div>
+            <div class="row-table-box">
+                <table class="table table-hover table-striped" data-id="$elementId$_tdDeviceList" id="$elementId$_tdDeviceList">
+                    <thead>
+                    <tr>
+                        <th style="width:60px;">序号</th>
+                        <th>设备类型</th>
+                        <th style="width:100px;">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    <div class="button-box" id="$elementId$_detailCtrlBtns">
+        <!--<button class="btn btn-primary">
+            确认
+        </button>-->
+        <button class="btn btn-danger">
+            关闭
+        </button>
+    </div>
+</div>

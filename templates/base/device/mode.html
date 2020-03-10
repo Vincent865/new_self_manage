@@ -1,0 +1,83 @@
+﻿<!--模式管理  begin-->
+<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">管理模式</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+        <div class="setting-title">设备信息</div>
+        <div class="setinfor-list">
+            <ul>
+                <li>设备型号: <span id="$elementId$_lblDeviceTypeNo" data-id="$elementId$_lblDeviceTypeNo"></span></li>
+                <li>序列号: <span id="$elementId$_lblDeviceSerialNo" data-id="$elementId$_lblDeviceSerialNo"></span></li>
+                <li>设备版本: <span id="$elementId$_lblDeviceVersion" data-id="$elementId$_lblDeviceVersion"></span></li>
+            </ul>
+        </div>
+        <hr />
+        <div class="row-setting">
+            <form id="$elementId$_formIP">
+                <div class="row-setting-title">
+                    IP设置 ( 当前IP: <span id="$elementId$_lblDeviceIP" data-id="$elementId$_lblDeviceIP"></span>)
+                    <button type="submit" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnIPSetting" data-id="$elementId$_btnIPSetting">
+                        <i class="fa fa-cog"></i>设置
+                    </button>
+                </div>
+                <div class="setinfor-list">
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <span style="width:40px; text-align:right;display:inline-block;">IP:</span>
+                                <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewIP" data-id="$elementId$_txtDeviceNewIP" datatype="ip" errormsg="必须输入有效的IP" placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1" />
+                            </div>
+                            <div class="col-md-6">
+                                <span style="width:60px; text-align:right;display:inline-block;">子网掩码:</span>
+                                <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewSubnet" data-id="$elementId$_txtDeviceNewSubnet" datatype="subnet" errormsg="必须输入有效的子网掩码" placeholder="(格式：255.255.255.0或24)" title="格式：255.255.255.0或24" />
+                            </div>
+                            <div class="col-md-6">
+                                <span style="width:40px; text-align:right;display:inline-block;">网关:</span>
+                                <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewGateway" data-id="$elementId$_txtDeviceNewGateway" datatype="ip" errormsg="必须输入有效的网关" placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <hr />
+        <div class="row-setting">
+            <div class="row-setting-title">
+                管理模式切换
+                <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnMode" data-id="$elementId$_btnMode">
+                    <i class="fa fa-cog"></i>设置
+                </button>
+            </div>
+            <div class="setinfor-list">
+                <ul>
+                    <li>
+                        管理模式切换:
+                        <input type="radio" checked="checked" class="dxinput" value="0" name="$elementId$_rabMode" id="$elementId$_rabMode2" data-id="$elementId$_rabMode2" />
+                        <label for="$elementId$_rabMode2"></label>集中管理
+                        <input type="radio" class="dxinput" name="$elementId$_rabMode" value="1" id="$elementId$_rabMode1" data-id="$elementId$_rabMode1" />
+                        <label for="$elementId$_rabMode1" style="margin-left:36px"></label>自管理
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+            <div class="setinfor-list" style="display:none;" id="$elementId$_divMode" data-id="$elementId$_divMode">
+                <ul>
+                    <li>
+                        <input type="radio" name="$elementId$_rabSelfMode" value="1" checked="checked" class="dxinput" id="$elementId$_rabSelfMode1" data-id="$elementId$_rabSelfMode1" />
+                        <label style="margin-left:35px;" for="$elementId$_rabSelfMode1"></label>自动发现安全监管平台
+                        <input type="radio" name="$elementId$_rabSelfMode" value="0" class="dxinput" id="$elementId$_rabSelfMode2" data-id="$elementId$_rabSelfMode2" />
+                        <label for="$elementId$_rabSelfMode2"></label>
+                        手工配置安全监管平台
+                        <input type="text" style="margin-left:10px;" class="form-control input-feedback setinfor-input" data-id="$elementId$_txtModeIP" id="$elementId$_txtModeIP" />
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--模式管理  end-->

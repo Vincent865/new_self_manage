@@ -1,0 +1,19 @@
+﻿{
+  "status": 1,
+  "switch": {
+    "modbus": 1,
+    "opcda": 1,
+    "iec104": 1,
+    "dnp3": 1,
+    "mms": 1,
+    "s7": 1,
+    "profinetio": 1,
+    "goose": 1,
+    "sv": 0,
+    "enip": 1,
+    "opcua": 0,
+    "pnrtdcp": 1,
+    "snmp": 1,
+    "focas": 1
+  }
+}

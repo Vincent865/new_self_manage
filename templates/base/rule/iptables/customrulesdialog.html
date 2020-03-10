@@ -1,0 +1,128 @@
+<div class="dialog-content" id="$elementId$_ipTableDetail">
+    <ul id="$elementId$_detailForm">
+        <li>
+            <label>规则名:</label>
+            <input type="text" value="" maxlength="64"/>
+            <span style="color:red">*</span>
+            <input type="checkbox" checked class="chinput" id="iptable_open"/>
+            <label for="iptable_open" style="margin-left:25px;"></label>启用
+            <input type="checkbox" class="chinput" id="iptable_log"/>
+            <label for="iptable_log" style="margin-left:25px;"></label>日志
+        </li>
+        <li>
+            <label>描述:</label>
+            <input type="text"  maxlength="128"/>
+        </li>
+        <li>
+            <label>源IP地址:</label>
+            <select name="" class="iptype form-control">
+            </select>
+            <input type="text" placeholder="格式：IP、IP/掩码、IP段('-'号分隔)" title="格式：IP、IP/掩码、IP段('-'号分隔)" value="" style="display:none;"/>
+        </li>
+        <li>
+            <label>源端口:</label>
+            <input type="text" placeholder="缺省默认值为any"/>
+        </li>
+        <li>
+            <label>输入接口:</label>
+            <select class="cardtype" name="">
+                <option value="">any</option>
+                <option value="eth0">eth0</option>
+                <option value="eth1">eth1</option>
+                <option value="eth2">eth2</option>
+                <option value="eth3">eth3</option>
+            </select>
+        </li>
+        <li>
+            <label>目的IP地址:</label>
+            <select name="" class="iptype form-control">
+            </select>
+            <input placeholder="格式：IP、IP/掩码、IP段('-'号分隔)" title="格式：IP、IP/掩码、IP段('-'号分隔)" type="text" value="" style="display:none;"/>
+        </li>
+        <li>
+            <label>输出接口:</label>
+            <select class="cardtype" name="">
+                <option value="">any</option>
+                <option value="eth0">eth0</option>
+                <option value="eth1">eth1</option>
+                <option value="eth2">eth2</option>
+                <option value="eth3">eth3</option>
+            </select>
+        </li>
+        <li>
+            <label>服务:</label>
+            <select class="servicetype" name="">
+            </select>
+            <span style="color:red">*</span>
+            <span style="position:relative;"><i class="fa fa-search searchsetbtn" aria-hidden="true"></i>
+            <input type="text" value="" style="" class="searchser" placeholder="请输入服务名查询" id="$elementId$_serviceNameFilter"/></span>
+        </li>
+        <li>
+            <label>动作:</label>
+            <span><input type="radio" class="dxinput" name="action" value="1" id="$elementId$_detailAction0" checked/>
+            <label for="$elementId$_detailAction0"></label>允许</span>
+
+            <span><input type="radio" class="dxinput" name="action" value="0" id="$elementId$_detailAction1" />
+            <label for="$elementId$_detailAction1"></label>丢弃</span>
+
+            <span><input type="radio" class="dxinput" name="action" value="2" id="$elementId$_detailAction2" />
+            <label for="$elementId$_detailAction2"></label>深度检测</span>
+
+        </li>
+    </ul>
+    <!--选择深度检测弹出部分：深度检测规则列表-->
+    <div id="$elementId$_detailTable" style="display:none;">
+        <div class="stable-toolbar row button-box">
+            <button class="btn btn-info btn-sm">
+                <i class="fa fa-plus"></i>新增
+            </button>
+            <button class="btn btn-info btn-sm">
+                <i class="fa fa-trash-o"></i>删除
+            </button>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped">
+                <thead>
+                <tr>
+                    <th class="th-check">
+                        <input type="checkbox" class="chinput" id="$elementId$_selectAll">
+                        <label for="$elementId$_selectAll"></label>全选
+                    </th>
+                    <th>功能码</th>
+                    <th>范围</th>
+                    <th>数据内容</th>
+                    <th>合规性评估</th>
+                    <th>描述</th>
+                    <th>动作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <!--<table class="table table-hover table-striped" id="$elementId$_opc">
+                <thead>
+                <tr>
+                    <th class="th-check">
+                        <input type="checkbox" class="chinput" id="$elementId$_selectAll">
+                        <label for="$elementId$_selectAll"></label>全选
+                    </th>
+                    <th>功能码</th>
+                    <th>描述</th>
+                    <th>动作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>-->
+        </div>
+    </div>
+    <span class="tipform" style="color:red;display:none;">请输入规则名</span>
+    <div class="stable-toolbar row button-box" id="$elementId$_detailCtrlBtns">
+        <button class="btn btn-info btn-sm">
+            确认
+        </button>
+        <button class="btn btn-danger btn-sm">
+            取消
+        </button>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<div class="row" id="deviceMainDiv">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">日志采集</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+
+        <div class="stable-toolbar row button-box">
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh"
+                    id="$elementId$_btnRefresh">
+                <i class="fa fa-refresh"></i>刷新
+            </button>
+            <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter"
+                    id="$elementId$_btnFilter">
+                <i class="fa fa-filter"></i>高级搜索
+            </button>
+        </div>
+        <div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label style="width:12%;">开始时间</label>
+                    <input class="Wdate" type="text"
+                           onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', maxDate: '#F{$dp.$D(\'$elementId$_txtEndDateTime\')}' })"
+                           data-id="$elementId$_txtStartDateTime" id="$elementId$_txtStartDateTime"/>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label style="width:12%;">结束时间</label>
+                    <input type="text" class="Wdate"
+                           onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', minDate: '#F{$dp.$D(\'$elementId$_txtStartDateTime\')}' })"
+                           data-id="$elementId$_txtEndDateTime" id="$elementId$_txtEndDateTime"/>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label style="width:12%;">事件等级</label>
+                    <select class="form-control selectpicker"  id="$elementId$_ddlEventLvl" multiple="multiple" data-id="$elementId$_ddlEventLvl">
+                        <option value="1">事件等级1</option>
+                        <option value="2">事件等级2</option>
+                        <option value="3">事件等级3</option>
+                        <option value="4">事件等级4</option>
+                        <option value="5">事件等级5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                    <label style="width:12%;">设备类型</label>
+                    <select class="form-control selectpicker" id="$elementId$_ddlDeviceType" multiple data-actions-box="true" data-id="$elementId$_ddlDeviceType">
+                        <option value="1">工作站类</option>
+                        <option value="2">数据库</option>
+                        <option value="3">网络设备</option>
+                        <option value="4">防火墙</option>
+                        <option value="5">横向正向隔离装置</option>
+                        <option value="6">横向反向隔离装置</option>
+                        <option value="7">纵向加密装置</option>
+                        <option value="8">防病毒系统</option>
+                        <option value="9">入侵检测系统</option>
+                        <option value="10">网络安全监测装置</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="col-sm-12 col-md-12 right-toolbar">
+                <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch"
+                        id="$elementId$_btnSearch">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" data-id="$elementId$_tdLogList" id="$elementId$_tdLogList">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>事件日期</th>
+                    <th>级别</th>
+                    <th>设备名称</th>
+                    <th>设备IP</th>
+                    <th>设备类型</th>
+                    <th>内容描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+            </div>
+        </div>
+    </div>
+</div>

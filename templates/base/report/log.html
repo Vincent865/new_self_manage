@@ -1,0 +1,105 @@
+﻿<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">日志报告</li>
+        </ul>
+    </div>
+    <!--<div  style="overflow: hidden;background: #fff;padding: 11px 19px 0px;margin: 10px 5px 0px;">
+        <div style="overflow:hidden;margin-bottom: 10px;">
+            <button type="button" class="btn btn-primary pull-right" data-id="event_btnFilter"
+                    id="$elementId$_event_btnFilter">
+                <i class="fa fa-filter"></i>自定义配置
+            </button>
+        </div>
+        <div id="$elementId$_advOpt" style="display:none;">
+            <div class="filter-box row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>开始时间</label>
+                        <input class="Wdate"
+                               onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', maxDate: '#F{$dp.$D(\'$elementId$_txtLogEndTime\')}' })"
+                               type="text" data-id="$elementId$_txtLogStartTime" id="$elementId$_txtLogStartTime"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>结束时间</label>
+                        <input class="Wdate"
+                               onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', minDate: '#F{$dp.$D(\'$elementId$_txtLogStartTime\')}' })"
+                               type="text" data-id="$elementId$_txtLogEndTime" id="$elementId$_txtLogEndTime"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" style="    float: right;background-color: #f5f5f4;padding: 10px;border-top: 1px dotted #aaa;">
+                <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnGenerate"
+                        id="$elementId$_btnGenerate">
+                    <i class="fa fa-cog"></i>生成
+                </button>
+            </div>
+        </div>
+    </div>-->
+    <div class="row-cutcontent">
+        <div class="row-setting">
+            <div class="row-setting-title">
+                日志报告自定义设置
+                <button type="button" data-id="event_btnFilter" id="$elementId$_event_btnFilter" class="btn btn-primary btn-sm pull-right">
+                    <i class="fa fa-cog"></i>自定义设置
+                </button>
+            </div>
+            <div id="$elementId$_advOpt" style="display:none;overflow:hidden;padding-top: 20px;">
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>开始时间</label>
+                        <input class="Wdate"
+                               onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', startDate:'#F{$(\'#spanSystemTime\').html()}',maxDate: '#F{$dp.$D(\'$elementId$_txtLogEndTime\')||($(\'#spanSystemTime\').html())}'})"
+                               type="text" data-id="$elementId$_txtLogStartTime" id="$elementId$_txtLogStartTime"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>结束时间</label>
+                        <input class="Wdate"
+                               onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', startDate:'#F{$(\'#spanSystemTime\').html()}',minDate: '#F{$dp.$D(\'$elementId$_txtLogStartTime\')}',maxDate: '#F{$(\'#spanSystemTime\').html()}' })"
+                               type="text" data-id="$elementId$_txtLogEndTime" id="$elementId$_txtLogEndTime"/>
+                    </div>
+                </div>
+                <div class="col-sm-12" style="float: right;background-color: #f5f5f4;padding:5px 10px;border-top: 1px dotted #aaa;">
+                    <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnGenerate"
+                            id="$elementId$_btnGenerate">
+                        <i class="fa fa-cog"></i>生成
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-setting">
+            <div class="row-setting-title">
+                定期日志报告设置
+                <button type="button" id="$elementId$_btnSetting" class="btn btn-primary btn-sm pull-right">
+                    <i class="fa fa-cog"></i>设置
+                </button>
+            </div>
+            <div class="form-setting">
+                <label>频率：</label>
+                <select id="$elementId$_ddlDurtion" class="form-control">
+                    <option value=1>每日</option>
+                    <option value=2>每周</option>
+                    <option value=3>每月</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDelete" id="$elementId$_btnDelete">
+                <i class="fa fa-trash-o"></i>删除
+            </button>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" id="$elementId$_tdEventlistList"></table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" id="$elementId$_pagerContent"></div>
+        </div>
+    </div>
+</div>
+

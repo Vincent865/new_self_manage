@@ -1,0 +1,137 @@
+<div class="dialog-content switch_dialog" style="margin:13px 10px;">
+    <div class="switch_dialog_edit" id="$elementId$_switch_dialog">
+        <div class="row-setting">
+            <div class="row-setting-title">
+                基本配置
+            </div>
+            <div class="setinfor-list" style="overflow:hidden;">
+                <ul class="commonul">
+                    <li>
+                        <label>交换机名称：</label>
+                        <input type="text" maxlength="30" placeholder="请输入数字、字母、下划线，长度1-30位" title="请输入数字、字母、下划线，长度1-30位"/><span style="color:red;">*</span>
+                    </li>
+                    <li>
+                        <label>IP：</label>
+                        <input placeholder="(格式：IPV4 或 IPV6地址)" title="(格式：IPV4 或 IPV6地址)" type="text"/><span style="color:red;">*</span>
+                    </li>
+                    <li>
+                        <label>类型：</label>
+                        <input type="text" maxlength="64" placeholder="长度1-64位" title="长度1-64位">
+                    </li>
+                    <li>
+                        <label>位置：</label>
+                        <input type="text" maxlength="64" placeholder="长度1-64位" title="长度1-64位"><span style="color:red;">*</span>
+                    </li>
+                </ul>
+                <span style="color:red;display:none;">以太网类型不符合规范</span>
+            </div>
+        </div>
+        <div class="row-setting">
+            <div class="row-setting-title">
+                SNMP配置
+            </div>
+            <div class="setinfor-list" style="overflow:hidden;">
+                <ul class="snmpul">
+                    <li>
+                        <label>SNMP版本：</label>
+                        <input type="radio" class="dxinput" value="1" name="version" id="version_1" checked>
+                        <label for="version_1"></label>V1
+                        <input type="radio" class="dxinput" value="2" name="version" id="version_2">
+                        <label for="version_2"></label>V2C
+                        <input type="radio" class="dxinput" value="3" name="version" id="version_3">
+                        <label for="version_3"></label>V3
+                    </li>
+                    <li class="v1">
+                        <label>团体名：</label>
+                        <input type="text" placeholder="请输入数字、字母、下划线，长度1-32位" title="请输入数字、字母、下划线，长度1-32位">
+                        <span style="color:red">*</span>
+                    </li>
+                    <li class="v3">
+                        <label>安全等级：</label>
+                        <select id="r_level">
+                            <option value="noAuthNoPriv">不认证不加密</option>
+                            <option value="authNoPriv">只认证不加密</option>
+                            <option value="authPriv">即认证又加密</option>
+                        </select>
+                        <span style="color:red">*</span>
+                    </li>
+                    <li class="v3">
+                        <label>安全用户名：</label>
+                        <input type="text" placeholder="请输入数字、字母、下划线，长度1-32位" title="请输入数字、字母、下划线，长度1-32位">
+                        <span style="color:red">*</span>
+                    </li>
+                    <li class="v3">
+                        <label>认证方式：</label>
+                        <select id="auth_mode" disabled>
+                            <option value="MD5">MD5</option>
+                            <option value="SHA">SHA</option>
+                        </select>
+                    </li>
+                    <li class="v3">
+                        <label>认证密码：</label>
+                        <input type="text" placeholder="请输入数字、字母、下划线，长度1-64位" title="请输入数字、字母、下划线，长度1-64位">
+                        <span style="color:red">*</span>
+                    </li>
+                    <li class="v3">
+                        <label>加密方式：</label>
+                        <select id="encrypt_mode" disabled>
+                            <option value="DES56">DES56</option>
+                            <option value="AES123">AES123</option>
+                            <option value="3EDS">3EDS</option>
+                        </select>
+                    </li>
+                    <li class="v3">
+                        <label>加密密码：</label>
+                        <input type="text" placeholder="请输入数字、字母、下划线，长度1-64位" title="请输入数字、字母、下划线，长度1-64位">
+                        <span style="color:red">*</span>
+
+                    </li>
+                </ul>
+                <span style="color:red;display:none;">以太网类型不符合规范</span>
+            </div>
+        </div>
+        <div class="row-setting">
+            <div class="row-setting-title">
+                SSH配置
+            </div>
+            <div class="setinfor-list" style="overflow:hidden;">
+                <ul class="sshul">
+                    <li>
+                        <label>用户名：</label>
+                        <input class="form-control" type="text"/><span style="color:red;">*</span>
+                    </li>
+                    <li>
+                        <label>密码：</label>
+                        <input class="form-control" type="text"/><span style="color:red;">*</span>
+                    </li>
+                </ul>
+                <span style="color:red;display:none;">以太网类型不符合规范</span>
+            </div>
+        </div>
+    </div>
+    <div class="button-box switch_dialog_edit">
+        <button class="btn btn-primary">
+            确认
+        </button>
+        <button class="btn btn-danger">
+            取消
+        </button>
+    </div>
+    <div class="switch_dialog_info">
+        <button type="button" class="btn btn-info btn-sm" data-id="behavior_btnRefresh" id="behavior_btnRefresh">
+            <i class="fa fa-refresh"></i>刷新
+        </button>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" data-id="behavior_tdProtocolList" id="behavior_tdProtocolList">
+                <thead>
+                <tr>
+                    <th class="w-50">序号</th>
+                    <th>MAC</th>
+                    <th>端口</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+</div>

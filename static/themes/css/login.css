@@ -1,0 +1,169 @@
+
+/**************************************************animation**************************************************/
+@keyframes loginbg { 0% { background: url(../images/banner01.jpg) no-repeat; background-size: cover;} 25% {background: url(../images/banner02.jpg) no-repeat; background-size: cover;} 50% { background: url(../images/banner03.jpg) no-repeat; background-size: cover;}75% { background: url(../images/banner04.jpg) no-repeat; background-size: cover;} 100% { background: url(../images/banner01.jpg) no-repeat; background-size: cover;} }
+@-webkit-keyframes loginbg { 0% { background: url(../images/banner01.jpg) no-repeat; background-size: cover;} 25% {background: url(../images/banner02.jpg) no-repeat; background-size: cover;} 50% { background: url(../images/banner03.jpg) no-repeat; background-size: cover;}75% { background: url(../images/banner04.jpg) no-repeat; background-size: cover;} 100% { background: url(../images/banner01.jpg) no-repeat; background-size: cover;} }
+@-ms-keyframes loginbg { 0% { background: url(../images/banner01.jpg) no-repeat; background-size: cover;} 25% {background: url(../images/banner02.jpg) no-repeat; background-size: cover;} 50% { background: url(../images/banner03.jpg) no-repeat; background-size: cover;}75% { background: url(../images/banner04.jpg) no-repeat; background-size: cover;} 100% { background: url(../images/banner01.jpg) no-repeat; background-size: cover;} }
+@-moz-keyframes loginbg { 0% { background: url(../images/banner01.jpg) no-repeat; background-size: cover;} 25% {background: url(../images/banner02.jpg) no-repeat; background-size: cover;} 50% { background: url(../images/banner03.jpg) no-repeat; background-size: cover;}75% { background: url(../images/banner04.jpg) no-repeat; background-size: cover;} 100% { background: url(../images/banner01.jpg) no-repeat; background-size: cover;} }
+
+@keyframes arrows { 0% { top:20px;} 50% {top:25px;} 100% { top:20px;}}
+@-webkit-keyframes arrows { 0% { top:20px;} 50% {top:25px;} 100% { top:20px;}}
+@-ms-keyframes arrows { 0% { top:20px;} 50% {top:25px;} 100% { top:20px;}}
+@-moz-keyframes arrows { 0% { top:20px;} 50% {top:25px;} 100% { top:20px;}}
+
+@keyframes arrowson { 0% { background:url(../images/arrowson01.png) no-repeat;} 35% { background:url(../images/arrowson02.png) no-repeat;} 75% { background:url(../images/arrowson03.png) no-repeat;} 100% { background:url(../images/arrowson01.png) no-repeat;}}
+@-webkit-keyframes arrowson { 0% { background:url(../images/arrowson01.png) no-repeat;} 35% { background:url(../images/arrowson02.png) no-repeat;} 75% { background:url(../images/arrowson03.png) no-repeat;} 100% { background:url(../images/arrowson01.png) no-repeat;}}
+@-ms-keyframes arrowson { 0% { background:url(../images/arrowson01.png) no-repeat;} 35% { background:url(../images/arrowson02.png) no-repeat;} 75% { background:url(../images/arrowson03.png) no-repeat;} 100% { background:url(../images/arrowson01.png) no-repeat;}}
+@-moz-keyframes arrowson { 0% { background:url(../images/arrowson01.png) no-repeat;} 35% { background:url(../images/arrowson02.png) no-repeat;} 75% { background:url(../images/arrowson03.png) no-repeat;} 100% { background:url(../images/arrowson01.png) no-repeat;}}
+
+/**************************************************login css**************************************************/
+.login_bg { 
+  width:100%; 
+  height: 100%; 
+  background: url(../images/banner01.jpg) no-repeat top #0C3C76; 
+  background-size: cover;   
+  position:relative; animation:loginbg 20s infinite; 
+  -webkit-animation:loginbg 20s infinite; 
+  -ms-animation:loginbg 20s infinite; 
+  -moz-animation:loginbg 20s infinite; 
+}
+
+.login_bottom {
+  width: 100%;
+  min-height: 7rem;
+  /*background: #0c3c76;*/
+  position: fixed;
+  bottom: 0;
+  margin: 0;
+  color: #fff;
+  z-index: 20;
+}
+
+.login_font {
+  line-height: 7rem;
+  color: #ffffff;
+  font-size: 1.3rem;
+  letter-spacing: 4px;
+  text-shadow: 2px 2px 4px #09131F;
+}
+.loginbox {
+  width: 400px;
+  height: 250px;
+  background: rgba(255,255,255,0.7);
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+.login_logo {
+  padding: 10px 0px;
+}
+.login-box {
+  margin-top: 120px;
+}
+.log_text {
+    color: #ff9600;
+    height: 20px;
+    line-height: 20px;
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.inputbox {
+  height: 105px;
+  padding: 15px;
+  border-radius: 2px;
+  background: #000000;
+  position: relative;
+}
+.input-login {
+	position: relative;
+}
+.input-login input {
+    height: 43px;
+    padding-left: 40px;
+    border:0;
+    background: #0a363a;
+    font-size: 1em;
+    line-height: 43px;
+    color: #ffffff;
+    outline: none;
+}
+.input-login input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #18222c inset; 
+  -webkit-text-fill-color: #fff;
+}
+.input-login i {
+	position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #fff;
+    z-index: 10;
+    font-size: 24px;
+}
+.btn-login {
+	background: #1f7d82;
+	color: #fff;
+	letter-spacing: 2px;
+	height: 44px;
+}
+.btn-login:hover {
+	background: #ca7420;
+	cursor: pointer;
+	color: #fff;
+}
+.btn-login:focus { 
+	outline:0;
+	color: #fff;
+}
+.copyright {
+
+}
+.copyright img {
+	margin: 20px 0px 10px;
+}
+
+@media (max-width: 991px) {
+   .login_font {
+        margin-top: 15px;
+        line-height: 2rem;
+        color: #ffffff;
+        font-size: 1.2rem;
+        letter-spacing: 4px;
+        text-shadow: 2px 2px 4px #09131F;
+}
+}
+/*progress,Éý¼¶×´Ì¬ÑùÊ½*/
+.progress-bg{
+    position: relative;
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.4);
+    z-index: 30;
+}
+.progress-bg>div{
+    width:60%;
+    margin:0 auto;
+    position: relative;
+    top: 45%;
+    z-index: 40;
+    opacity: .8;
+}
+.progress-bg .pro-tip{
+    color:#fff;
+    font-size:25px;
+}
+.progress-bg .pro-num{
+    font-size:40px;
+    margin-left: 8px;
+}
+.progress{
+    height:30px;
+    margin-top:10px;
+}
+.blur{
+    position: absolute;
+    left:0;
+    top:0;
+    background: inherit;
+    filter: blur(4px);
+    z-index: 15;
+}
+

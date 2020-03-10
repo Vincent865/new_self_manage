@@ -1,0 +1,126 @@
+﻿<div class="setting-title">设备信息</div>
+<div class="setinfor-list">
+    <ul>
+        <li>设备型号: <span id="$elementId$_lblDeviceTypeNo" data-id="$elementId$_lblDeviceTypeNo"></span></li>
+        <li>序列号: <span id="$elementId$_lblDeviceSerialNo" data-id="$elementId$_lblDeviceSerialNo"></span></li>
+        <li>设备版本: <span id="$elementId$_lblDeviceVersion" data-id="$elementId$_lblDeviceVersion"></span></li>
+    </ul>
+</div>
+<hr />
+<div class="row-setting">
+    <form id="$elementId$_formIP">
+        <div class="row-setting-title">
+            管理口IPV4地址设置 ( 当前IP: <span id="$elementId$_lblDeviceIP" data-id="$elementId$_lblDeviceIP"></span>)
+            <button type="submit" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnIPSetting" data-id="$elementId$_btnIPSetting">
+                <i class="fa fa-cog"></i>设置
+            </button>
+        </div>
+        <div class="setinfor-list">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span style="width:65px; text-align:right;display:inline-block;">IPV4地址:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewIP" data-id="$elementId$_txtDeviceNewIP" datatype="ip" errormsg="必须输入有效的IP" placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1" />
+                    </div>
+                    <div class="col-md-6">
+                        <span style="width:90px; text-align:right;display:inline-block;">子网掩码:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewSubnet" data-id="$elementId$_txtDeviceNewSubnet" datatype="subnet" errormsg="必须输入有效的子网掩码" placeholder="(格式：255.255.255.0或24)" title="格式：255.255.255.0或24" />
+                    </div>
+                    <div class="col-md-6">
+                        <span style="width:65px; text-align:right;display:inline-block;">网关:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewGateway" data-id="$elementId$_txtDeviceNewGateway" datatype="ip" errormsg="必须输入有效的网关" placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<hr />
+<div class="row-setting">
+    <form id="$elementId$_formIP6">
+        <div class="row-setting-title">
+            管理口IPV6地址设置 ( 当前IP: <span id="$elementId$_lblDeviceIP6" data-id="$elementId$_lblDeviceIP6"></span>)
+            <button type="submit" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnIP6Setting" data-id="$elementId$_btnIP6Setting">
+                <i class="fa fa-cog"></i>设置
+            </button>
+        </div>
+        <div class="setinfor-list">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span style="width:65px; text-align:right;display:inline-block;">IPV6地址:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewIP6" data-id="$elementId$_txtDeviceNewIP6" datatype="ip6" errormsg="必须输入有效的IPV6地址"/>
+                    </div>
+                    <div class="col-md-6">
+                        <span style="width:90px; text-align:right;display:inline-block;">子网前缀长度:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewSubnet6" data-id="$elementId$_txtDeviceNewSubnet6" datatype="subnet6" errormsg="必须输入有效的子网前缀长度" placeholder="范围：0-128" title="范围：0-128" />
+                    </div>
+                    <div class="col-md-6">
+                        <span style="width:65px; text-align:right;display:inline-block;">网关:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtDeviceNewGateway6" data-id="$elementId$_txtDeviceNewGateway6" datatype="ip6" errormsg="必须输入有效的IPV6网关"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<hr />
+<div class="row-setting">
+    <form id="$elementId$_formDatetime">
+        <div class="row-setting-title">
+            时间设置
+            <button type="submit" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnDateTimeSetting" data-id="$elementId$_btnDateTimeSetting">
+                <i class="fa fa-cog"></i>设置
+            </button>
+        </div>
+        <div class="setinfor-list">
+            <ul>
+                <li>
+                    <input type="radio" class="dxinput" name="$elementId$_rabDeviceDateTime" id="device_basic_rabDeviceDateTime1" data-id="$elementId$_rabDeviceDateTime1" value="1" checked="checked">
+                    <label for="device_basic_rabDeviceDateTime1"></label>
+                    手工输入: <input type="text" class="Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" style="width:200px;" id="$elementId$_txtDeviceDateTime3" data-id="$elementId$_txtDeviceDateTime3" />
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+        <div class="setinfor-list">
+            <ul>
+                <li>
+                    <input type="radio" class="dxinput" name="$elementId$_rabDeviceDateTime" id="$elementId$_rabDeviceDateTime2" data-id="$elementId$_rabDeviceDateTime2" value="2" />
+                    <label for="$elementId$_rabDeviceDateTime2"></label>
+                    NTP自动同步: <input class="form-control input-feedback setinfor-input" type="text" id="$elementId$_txtDeviceDateTime4" data-id="$elementId$_txtDeviceDateTime4" datatype="ip" errormsg="必须输入有效的IP" disabled="disabled" title="服务器地址,如:192.168.1.1" placeholder="(服务器地址,如:192.168.1.1)" />
+                </li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+    </form>
+</div>
+<hr />
+<div class="row-setting">
+    <div class="row-setting-title">
+        自动删除策略
+        <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnPolicySetting" data-id="$elementId$_btnPolicySetting">
+            <i class="fa fa-cog"></i>设置
+        </button>
+    </div>
+    <div class="setinfor-list">
+        <ul>
+            <li class="clearfloat">
+                存储管理配置: 设置存储空间上限为
+                <input type="text" class="setinfor-inputmin" maxlength="3" id="$elementId$_txtPolicyAmount" data-id="$elementId$_txtPolicyAmount" />%，
+                超过上限系统将会自动报警
+                <small class="validform_checktip"></small>
+            </li>
+            <li class="clearfloat">
+                定期删除信息: 定期自动删除所有日志和系统记录 保存周期
+                <select class="form-control setinfor-input" id="$elementId$_ddlPollicyDay" data-id="$elementId$_ddlPollicyDay">
+                    <option value="0">永久</option>
+                    <option value="30">保存30天</option>
+                    <option value="90">保存90天</option>
+                    <option value="365">保存365天</option>
+                </select>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>

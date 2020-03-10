@@ -1,0 +1,46 @@
+﻿<div class="enevt_details">
+    <div class="popup_txt">
+        <ul class="ev_txt">
+            <li>协议类型：<span id="$elementId$_lblProtocol" data-id="$elementId$_lblProtocol"></span></li>
+            <li>起始时间：<span id="$elementId$_lblDatetime" data-id="$elementId$_lblDatetime"></span></li>
+            <li>IP地址：<span id="$elementId$_lblIP" data-id="$elementId$_lblIP"></span></li>
+            <li>端口：<span id="$elementId$_lblPort" data-id="$elementId$_lblPort"></span></li>
+            <li>MAC地址：<span id="$elementId$_lblMac" data-id="$elementId$_lblMac"></span></li>
+        </ul>
+        <hr />
+        <div class="eventinfo_box">
+            <div class="tabsafeev" style="min-height:inherit;">
+                <div class="tabtitle">
+                    <ul>
+                        <li class="hit" data-id="$elementId$_tabSession">会话回放</li>
+                        <li data-id="$elementId$_tabFile">文件下载</li>
+                    </ul>
+                </div>
+                <div class="tabmian">
+                    <div class="tabmiantxt" data-id="$elementId$_tabSessionHolder" id="$elementId$_tabSessionHolder" style="min-height:inherit;">
+                        <div class="tabdiv">
+                            <label>设置解压密码: </label>
+                            <input type="password" class="inputip" data-id="$elementId$_session_txtExtraPwd" id="$elementId$_session_txtExtraPwd" />
+                            <button class="but button-down" data-id="$elementId$_session_btnDownload" id="$elementId$_session_btnDownload">下载</button>
+                        </div>
+                        <div class="tabdiv">
+                            <div class="textarea" data-id="$elementId$_session_txtContent" id="$elementId$_session_txtContent" style="line-height:24px;"></div>
+                        </div>
+                    </div>
+                    <div class="tabmiantxt" data-id="$elementId$_tabFileHolder" id="$elementId$_tabFileHolder" style="min-height:inherit;">
+                        <div class="tabdiv">
+                            <button class="butchange refresh" data-id="$elementId$_file_btnRefresh" id="$elementId$_file_btnRefresh">刷新</button>
+                            <label>设置解压密码: </label>
+                            <input type="password" class="inputip" data-id="$elementId$_file_txtExtraPwd" id="$elementId$_file_txtExtraPwd" />
+                        </div>
+                        <div class="tabel_div">
+                            <table data-id="$elementId$_file_tdFileList" id="$elementId$_file_tdFileList"></table>
+                        </div>
+                        <div class="page" data-id="$elementId$_file_pagerContent" id="$elementId$_file_pagerContent">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿<!--系统升级  begin-->
+<form action="" method="post" id="$elementId$_formUpload" enctype="multipart/form-data">
+    <div class="row-setting">
+        <div class="row-setting-title">
+            系统升级
+            <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnUpgrade" data-id="$elementId$_btnUpgrade">
+                <i class="fa fa-laptop"></i>开始升级
+            </button>
+        </div>
+        <div class="setinfor-list">
+            <ul>
+                <li>
+                    升级包文件：
+                    <label for="$elementId$_fileUpload" class="btn btn-info btn-sm" id="$elementId$_btnUpload" data-id="$elementId$_btnUpload">
+                        <i class="fa fa-folder-open"></i>浏览
+                    </label>
+                    <input type="file" name="$elementId$_fileUpload" id="$elementId$_fileUpload" data-id="$elementId$_fileUpload" style="position:absolute;width:1px;z-index:-999;filter:alpha(opacity=10);-moz-opacity:0.01;-khtml-opacity: 0.01; opacity: 0.01; " />
+                    <small class="dic" id="$elementId$_errUpload" data-id="$elementId$_errUpload">选择上传文件</small>
+                </li>
+            </ul>
+            <div class="clearfix">
+                <input type="hidden" data-id="$elementId$_hfLoginUser" name="loginuser" id="loginuser" />
+            </div>
+        </div>
+    </div>
+</form>
+<!--系统升级  end-->

@@ -1,0 +1,71 @@
+<div class="row nettopo-content" id="mainDeviceDiv">
+    <div class="col-sm-12 col-md-9 nettopo-box" style="overflow: hidden;position:relative;z-index:1;padding:0" id="leftContainer">
+        <!-- Creates a container for the graph with a grid wallpaper -->
+        <div class="collapsebtn"><button></button></div>
+        <div id="graphContainer"
+             style="overflow:hidden;width:100%;height:100%;cursor:default;">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-3 nettopo-inputbox" style="z-index:2;">
+        <div class="net-title">拓扑缩略图</div>
+        <div id="outlineContainer" style="width:240px;height:130px;overflow:hidden;border:1px solid #ccc;margin:15px auto;"></div>
+        <div class="net-title">拓扑图操作</div>
+        <div style="margin:15px 15px;padding:0px 25px;/*text-align: justify;*/" class="operbtns">
+                <button id="zoomin"><i class="zoominpic"></i>放　　大</button>
+                <button id="zoomout"><i class="zoomoutpic"></i>缩　　小</button>
+                <button id="actual"><i class="actualpic"></i>实际大小</button>
+                <button id="showall"><i class="showallpic"></i>显示所有</button>
+                <button id="intopograph"><i class="pluspic"></i>资产加入</button>
+                <button id="addgroup"><i class="grouppic"></i>添 加 组</button>
+                <button id="clear"><i class="clearpic"></i>清　　空</button>
+                <button id="recover"><i class="recoverpic"></i>状态还原</button>
+                <button id="export"><i class="savepic"></i>保　　存</button>
+        </div>
+        <div class="net-title">资产信息</div>
+        <div class="net-inputbox" id="assetsInfoDetail">
+            <ul>
+                <li>
+                    <label class="netlabel">设备名称</label>
+                    <input type="text" id="txtDeviceName" class="netiput" maxlength="20">
+                </li>
+                <li>
+                    <label class="netlabel">IP地址</label>
+                    <input disabled type="text" id="txtDeviceIP" class="netiput dis" readonly="readonly">
+                </li>
+                <li>
+                    <label class="netlabel">MAC地址</label>
+                    <input disabled type="text" id="txtDeviceMAC" class="netiput dis" readonly="readonly">
+                </li>
+                <li>
+                    <label class="netlabel">设备类型</label>
+                    <select id="txtDeviceType" class="netiput">
+                        <option value="0">未知</option>
+                    </select>
+                </li>
+                <li>
+                    <label class="netlabel">接入状态</label>
+                    <select id="txtAccessStatus" class="netiput">
+                        <option value="0">正常接入</option>
+                        <option value="1">非法接入</option>
+                    </select>
+                </li>
+                <li>
+                    <label class="netlabel">厂商信息</label>
+                    <input type="text" id="txtVender" class="netiput">
+                </li>
+                <li>
+                    <label class="netlabel">设备型号</label>
+                    <input type="text" id="txtDescription" class="netiput">
+                </li>
+                <li>
+                    <button type="button" style="float: left;margin-left: 20px;" id="btnView" class="btn btn-primary style-sm">
+                        <i class="fa fa-file-text-o"></i>查看详情
+                    </button>
+                    <button type="button" id="btnUpdate" style="margin-right: 20px;" class="btn btn-primary style-sm">
+                        <i class="fa fa-cog"></i>修改
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

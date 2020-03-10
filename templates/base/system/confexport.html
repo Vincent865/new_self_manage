@@ -1,0 +1,24 @@
+﻿<div class="row-setting">
+    <div class="row-setting-title">
+        配置导入导出
+    </div>
+    <div class="setinfor-list">
+        <form action="" method="post" id="$elementId$_ConfForm" enctype="multipart/form-data">
+            上传配置文件：
+            <label for="$elementId$_ConfImportMedia" class="btn btn-info btn-sm" id="$elementId$_btnConfImport" data-id="$elementId$_btnConfImport">
+                <i class="fa fa-folder-open"></i>浏览文件
+            </label>
+            <input type="file" id="$elementId$_ConfImportMedia" name="$elementId$_ConfImportMedia" style="opacity:0;display:none;"/>
+            <span style="display: inline-block;min-width: 200px;height: 34px;line-height: 34px;background: #DDF4FA;padding: 0px 5px;" id="$elementId$_showtip">请选择导入的配置文件</span>
+            <button class="btn btn-primary" id="$elementId$_btnUpload">
+                <i class="fa fa-mail-reply"></i>开始导入
+            </button>
+            <button type="button" class="btn btn-primary" id="$elementId$_btnConfExport" data-id="$elementId$_btnConfExport">
+                <i class="fa fa-mail-forward"></i>配置导出
+            </button>
+            <div class="clearfix">
+                <input type="hidden" data-id="$elementId$_hfLoginUser" name="loginuser" id="loginuser" />
+            </div>
+        </form>
+    </div>
+</div>

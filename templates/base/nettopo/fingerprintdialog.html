@@ -1,0 +1,79 @@
+﻿<div class="dialog-content" id="$elementId$_fingerDetail">
+    <ul id="$elementId$_detailForm" style="margin-bottom:0;">
+        <li>
+            <label>指纹名称:</label>
+            <input type="text" title="格式：支持字母、数字、中文与下划线" placeholder="格式：支持字母、数字、中文与下划线" maxlength="128" />
+            <span style="color:red">*</span>
+        </li>
+        <li>
+            <label>厂商信息:</label>
+            <input type="text" title="长度不超过128位" placeholder="长度不超过128位" maxlength="128" />
+        </li>
+        <li>
+            <label>设备类型:</label>
+            <select></select>
+        </li>
+        <li>
+            <label>设备型号:</label>
+            <input type="text" title="长度不超过128位" placeholder="长度不超过128位" maxlength="128" />
+        </li>
+    </ul>
+    <div class="stable-toolbar row button-box" id="$elementId$_macFormBtns">
+        <button class="btn btn-info btn-sm">
+            <i class="fa fa-plus"></i>新增MAC
+        </button>
+        <button class="btn btn-info btn-sm">
+            <i class="fa fa-trash-o"></i>删除
+        </button>
+    </div>
+    <div id="$elementId$_macTable">
+        <div class="row-table-box" style="margin:0;">
+            <ul style="margin-bottom:0;" class="mactpl">
+                <!--<li>
+                    <input type="checkbox" class="idx chinput" data-idx="0" id="chk_mac_0"><label for="chk_mac_0"></label>
+                    <input type="text" maxlength="2">:
+                    <input type="text" maxlength="2">:
+                    <input type="text" maxlength="2">:
+                    <input type="text" maxlength="2">:
+                    <input type="text" maxlength="2">:
+                    <input type="text" maxlength="2">
+                </li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="stable-toolbar row button-box" id="$elementId$_protoFormBtns">
+        <button class="btn btn-info btn-sm">
+            <i class="fa fa-plus"></i>新增协议端口
+        </button>
+        <button class="btn btn-info btn-sm">
+            <i class="fa fa-trash-o"></i>删除
+        </button>
+    </div>
+    <div id="$elementId$_protoTable">
+        <div class="row-table-box" style="margin:0;">
+            <ul style="margin-bottom:0;" class="prototpl">
+                <!--<li>
+                    <input type="checkbox" class="idx chinput" data-idx="0" id="chk_pro_0"><label for="chk_pro_0"></label>
+                    <label>协议:</label><select></select>
+                    <label>端口:</label><input type="text" placeholder="范围1-65535">
+                    <label>资产属性:</label>
+                    <div>
+                        <input type="checkbox" class="idx chinput" data-idx="0" id="chk_type_1"><label for="chk_type_1"></label>
+                        客户端
+                        <input type="checkbox" class="idx chinput" data-idx="0" id="chk_type_2"><label for="chk_type_2"></label>
+                        服务端
+                        <span style="color:red">*</span>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+    <div class="stable-toolbar row button-box" id="$elementId$_detailCtrlBtns">
+        <button class="btn btn-info btn-sm">
+            确认
+        </button>
+        <button class="btn btn-danger btn-sm">
+            取消
+        </button>
+    </div>
+</div>

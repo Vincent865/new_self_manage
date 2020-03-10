@@ -1,0 +1,128 @@
+﻿<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">安全事件 （<span id="evtcout" style="color:#f54217;"></span>）</li>
+        </ul>
+        <span class="modetip" id="$elementId$_modetip" data-id="$elementId$_modetip">提示：安全事件已更新，如需查看请点击刷新按钮</span>
+    </div>
+    <div class="row-cutcontent" data-id="$elementId$_safeEventHolder" id="$elementId$_safeEventHolder">
+        <div class="stable-toolbar row button-box">
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+                <i class="fa fa-refresh"></i>刷新
+            </button>
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnSetRead" id="$elementId$_btnSetRead">
+                <i class="fa fa-check-square-o"></i>全部标记为已读
+            </button>
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnClear" id="$elementId$_btnClear">
+                <i class="fa fa-trash-o"></i>清空所有事件
+            </button>
+            <!--<button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnExport" id="$elementId$_btnExport">
+                <i class="fa fa-share"></i>导出数据
+            </button>-->
+            <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+                <i class="fa fa-filter"></i>高级搜索
+            </button>
+        </div>
+        <div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>开始时间</label>
+                    <input class="Wdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', maxDate: '#F{$dp.$D(\'$elementId$_txtEndDateTime\')}' })" data-id="$elementId$_txtStartDateTime" id="$elementId$_txtStartDateTime" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>结束时间</label>
+                    <input class="Wdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', minDate: '#F{$dp.$D(\'$elementId$_txtStartDateTime\')}' })" data-id="$elementId$_txtEndDateTime" id="$elementId$_txtEndDateTime" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>源设备名</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSourceName" id="$elementId$_txtSourceName" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>目的设备名</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDestinationName" id="$elementId$_txtDestinationName" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>源地址</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSourceIP" id="$elementId$_txtSourceIP" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>目的地址</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDestinationIP" id="$elementId$_txtDestinationIP" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>应用层协议</label>
+                    <select class="form-control" id="$elementId$_txtProtocol" data-id="$elementId$_txtProtocol">
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>事件来源</label>
+                    <select class="form-control" data-id="$elementId$_ddlEventSource" id="$elementId$_ddlEventSource">
+                        <option value="0" selected="selected">全部</option>
+                        <option value="1">白名单</option>
+                        <option value="2">黑名单</option>
+                        <option value="3">IP/MAC</option>
+                        <option value="4">流量告警</option>
+                        <option value="5">MAC过滤</option>
+                        <option value="6">资产告警</option>
+                        <option value="7">不合规报文告警</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>危险级别</label>
+                    <select class="form-control" data-id="$elementId$_ddlRiskLevel" id="$elementId$_ddlRiskLevel">
+                        <option value="" selected="selected">全部</option>
+                        <option value="0">低</option>
+                        <option value="1">中</option>
+                        <option value="2">高</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="col-sm-12 col-md-12 right-toolbar">
+                <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" id="$elementId$_tdEventList" data-id="$elementId$_tdEventList">
+                <thead>
+                    <tr>
+                        <th>时间</th>
+                        <th>源设备名</th>
+                        <th>目的设备名</th>
+                        <th>源地址</th>
+                        <th>目的地址</th>
+                        <th>应用层协议</th>
+                        <th>事件处理</th>
+                        <th>事件来源</th>
+                        <th>危险等级</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" id="$elementId$_pagerContent" data-id="$elementId$_pagerContent"></div>
+        </div>
+    </div>
+</div>

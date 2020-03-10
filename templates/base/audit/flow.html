@@ -1,0 +1,174 @@
+﻿<div class="row" id="deviceMainDiv">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">流量监控</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+        <div class="stable-toolbar row button-box">
+            <button type="button" class="btn btn-info btn-sm" id="$elementId$_btnRefresh">
+                <i class="fa fa-refresh"></i>刷新
+            </button>
+            <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+                <i class="fa fa-filter"></i>高级搜索
+            </button>
+        </div>
+        <div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>设备名称</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevName" id="$elementId$_txtDevName" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>IP地址</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevIp" id="$elementId$_txtDevIp" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>MAC地址</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevMac" id="$elementId$_txtDevMac" />
+                </div>
+            </div>
+            <hr>
+            <div class="col-sm-12 col-md-12 right-toolbar">
+                <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6" id="$elementId$_divFlow1" style="display:none">
+                <div class="row-flowratio-box">
+                    <div class="flow_title">
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="display:none" id="$elementId$_btnDeleteOne">
+                            <i class="fa fa-times"></i>删除
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnCancleOne">
+                            <i class="fa fa-times-circle"></i>取消
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnSaveOne">
+                            <i class="fa fa-check-circle"></i>保存
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;" id="$elementId$_btnEditOne">
+                            <i class="fa fa-pencil-square-o"></i>编辑
+                        </button>
+                        <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divDownOne">低域值：<input type="text" style="width:50px;" class="fontcolor-success" id="$elementId$_valueDownOne" />
+                        </div>
+                        <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divUpOne">高域值：<input type="text" style="width:50px;" class="fontcolor-height" id="$elementId$_valueUpOne" />
+                        </div>
+                    </div>
+                    <div style="height:90%; position:relative; margin-top: 30px;" id="$elementId$_divOne">
+                        <div style="height:90%;" id="$elementId$_divChartOne"></div>
+                        <div id="$elementId$_sliderOne" style="height: 62%; position: absolute; top: 52px;  right: 3px;  display: none;"></div>
+                        <button type="button" class="btn btn-primary btn-sm btn-flow-big" style="display:none" id="$elementId$_btnPluseOne"><i class="fa fa-plus"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm btn-flow-small" style="display:none" id="$elementId$_btnReduceOne"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6" id="$elementId$_divFlow2" style="display:none">
+                <div class="row-flowratio-box">
+                    <div class="flow_title">
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="display:none" id="$elementId$_btnDeleteTwo">
+                            <i class="fa fa-times"></i>删除
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnCancleTwo">
+                            <i class="fa fa-times-circle"></i>取消
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnSaveTwo">
+                            <i class="fa fa-check-circle"></i>保存
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;" id="$elementId$_btnEditTwo">
+                            <i class="fa fa-pencil-square-o"></i>编辑
+                        </button>
+                        <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divDownTwo">
+                            低域值：<input type="text" style="width:50px;" class="fontcolor-success" id="$elementId$_valueDownTwo" />
+                        </div>
+                        <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divUpTwo">
+                            高域值：<input type="text" style="width:50px;" class="fontcolor-height" id="$elementId$_valueUpTwo" />
+                        </div>
+                    </div>
+                    <div style="height:90%; position:relative; margin-top: 30px;" id="$elementId$_divTwo">
+                        <div style="height:90%;"  id="$elementId$_divChartTwo"></div>
+                        <div id="$elementId$_sliderTwo" style="height: 62%; position: absolute; top: 52px;  right: 3px;  display: none;"></div>
+                        <button type="button" class="btn btn-primary btn-sm btn-flow-big" style="display:none" id="$elementId$_btnPluseTwo"><i class="fa fa-plus"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm btn-flow-small" style="display:none" id="$elementId$_btnReduceTwo"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6" id="$elementId$_divFlow3" style="display:none">
+                <div class="row-flowratio-box">
+                    <div class="flow_title">
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="display:none" id="$elementId$_btnDeleteThree">
+                            <i class="fa fa-times"></i>删除
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnCancleThree">
+                            <i class="fa fa-times-circle"></i>取消
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnSaveThree">
+                            <i class="fa fa-check-circle"></i>保存
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;" id="$elementId$_btnEditThree">
+                            <i class="fa fa-pencil-square-o"></i>编辑
+                        </button>
+                        <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divDownThree">
+                            低域值：<input type="text" style="width:50px;" class="fontcolor-success" id="$elementId$_valueDownThree" />
+                        </div>
+                        <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divUpThree">
+                            高域值：<input type="text" style="width:50px;" class="fontcolor-height" id="$elementId$_valueUpThree" />
+                        </div>
+                    </div>
+                    <div style="height:90%; position:relative; margin-top: 30px;" id="$elementId$_divThree">
+                        <div style="height:90%;" id="$elementId$_divChartThree"></div>
+                        <div id="$elementId$_sliderThree" style="height: 62%; position: absolute; top: 52px;  right: 3px;  display: none;"></div>
+                        <button type="button" class="btn btn-primary btn-sm btn-flow-big" style="display:none" id="$elementId$_btnPluseThree"><i class="fa fa-plus"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm btn-flow-small" style="display:none" id="$elementId$_btnReduceThree"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6" id="$elementId$_divFlow4" style="display:none">
+                <div class="row-flowratio-box">
+                    <div class="flow_title">
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="display:none" id="$elementId$_btnDeleteFour">
+                            <i class="fa fa-times"></i>删除
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px; display:none" id="$elementId$_btnCancleFour">
+                            <i class="fa fa-times-circle"></i>取消
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnSaveFour">
+                            <i class="fa fa-check-circle"></i>保存
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;" id="$elementId$_btnEditFour">
+                            <i class="fa fa-pencil-square-o"></i>编辑
+                        </button>
+                        <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divDownFour">
+                            低域值：<input type="text" style="width:50px;" class="fontcolor-success" id="$elementId$_valueDownFour" />
+                        </div>
+                        <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divUpFour">
+                            高域值：<input type="text" style="width:50px;" class="fontcolor-height" id="$elementId$_valueUpFour" />
+                        </div>
+                    </div>
+                    <div style="height:90%; position:relative; margin-top: 30px;" id="$elementId$_divFour">
+                        <div style="height:90%;" id="$elementId$_divChartFour"></div>
+                        <div id="$elementId$_sliderFour" style="height: 62%; position: absolute; top: 52px;  right: 3px;  display: none;"></div>
+                        <button type="button" class="btn btn-primary btn-sm btn-flow-big" style="display:none" id="$elementId$_btnPluseFour"><i class="fa fa-plus"></i></button>
+                        <button type="button" class="btn btn-primary btn-sm btn-flow-small" style="display:none" id="$elementId$_btnReduceFour"><i class="fa fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" id="$elementId$_tdFlowList"></table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" id="$elementId$_pagerContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+

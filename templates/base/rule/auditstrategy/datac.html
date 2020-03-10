@@ -1,0 +1,102 @@
+﻿
+﻿<div class="stable-toolbar row button-box">
+    <div class="filter-box row">
+        <div class="col-sm-12 col-md-4">
+            <div class="form-group">
+                <label>地址类型:</label>
+                <input type="radio" class="dxinput" name="iptype" id="$elementId$_iptype4" value="4" checked/><label for="$elementId$_iptype4"></label><label>IPV4</label>
+                <input type="radio" class="dxinput" name="iptype" id="$elementId$_iptype6" value="6"/><label for="$elementId$_iptype6"></label><label>IPV6</label>
+            </div>
+        </div>
+        <hr/>
+        <div class="col-sm-12 col-md-4">
+            <div class="form-group">
+                <label><span class="v4">源IPV4地址:</span><span class="v6" style="display:none">源IPV6地址:</span></label>
+                <input class="form-control input-
+                feedback v4" type="text" data-id="$elementId$_txtSrcip" id="$elementId$_txtSrcip"  placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1"/>
+                <input class="form-control input-feedback v6" type="text" data-id="$elementId$_txtSrcip6" id="$elementId$_txtSrcip6" style="display:none"/>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="form-group">
+                <label><span class="v4">目的IPV4地址:</span><span class="v6" style="display:none">目的IPV6地址:</span></label>
+                <input class="form-control input-feedback v4" type="text" data-id="$elementId$_txtDstip" id="$elementId$_txtDstip" placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1"/>
+                <input class="form-control input-feedback v6" type="text" data-id="$elementId$_txtDstip6" id="$elementId$_txtDstip6" style="display:none"/>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="form-group">
+                <label>源MAC:</label>
+                <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSrcMac" id="$elementId$_txtSrcMac" placeholder="(格式：1A:2B:3C:66:DE:88)" title="格式：1A:2B:3C:66:DE:88"/>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="form-group">
+                <label>目的MAC:</label>
+                <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDstMac" id="$elementId$_txtDstMac" placeholder="(格式：1A:2B:3C:66:DE:88)" title="格式：1A:2B:3C:66:DE:88" />
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="form-group">
+                <label>目的端口:</label>
+                <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDstport" id="$elementId$_txtDstport" placeholder="(格式：1-65535)" title="(格式：1-65535)"/>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+            <div class="form-group">
+                <label>传输层协议:</label>
+                <select class="form-control input-feedback" data-id="$elementId$_txtProto" id="$elementId$_txtProto">
+                    <option value="0">全部</option>
+                    <option value="1">TCP</option>
+                    <option value="2">UDP</option>
+                </select>
+            </div>
+        </div>
+        <hr/>
+        <div class="col-sm-12 col-md-1" style="float: right;">
+            <button type="button" class="btn btn-primary" data-id="$elementId$_btnAdd" id="$elementId$_btnAdd">
+                <i class="fa fa-plus"></i>添加
+            </button>
+        </div>
+    </div>
+    <hr />
+    <div class="stable-toolbar row button-box">
+        <div class="col-sm-12 col-md-8 left-toolbar">
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+                <i class="fa fa-refresh"></i>刷新
+            </button>
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnEnable" id="$elementId$_btnEnable">
+                <i class="fa fa-check-square-o"></i>启用所有
+            </button>
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDisable" id="$elementId$_btnDisable">
+                <i class="fa fa-minus-circle"></i>禁用所有
+            </button>
+        </div>
+        <div class="col-sm-12 col-md-4 right-toolbar">
+
+        </div>
+    </div>
+    <div class="row-table-box">
+        <table class="table table-hover table-striped" data-id="$elementId$_tdDatacList" id="$elementId$_tdDatacList">
+            <thead>
+                <tr>
+                    <th class="w-50">序号</th>
+                    <th>源IP</th>
+                    <th>目的IP</th>
+                    <th>源MAC</th>
+                    <th>目的MAC</th>
+                    <th>目的端口</th>
+                    <th>协议</th>
+                    <th>启动状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div class="row pagination-custom">
+        <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+        </div>
+    </div>
+</div>

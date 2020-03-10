@@ -1,0 +1,172 @@
+﻿<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">IP/MAC</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+        <!--<div class="filter-box row">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>地址类型:</label>
+                    <input type="radio" class="dxinput" name="iptype" id="$elementId$_iptype4" value="4" checked/><label for="$elementId$_iptype4"></label><label>IPV4</label>
+                    <input type="radio" class="dxinput" name="iptype" id="$elementId$_iptype6" value="6"/><label for="$elementId$_iptype6"></label><label>IPV6</label>
+                </div>
+            </div>
+            <hr/>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>规则名称:</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevice" id="$elementId$_txtDevice" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label><span class="v4">IPV4地址:</span><span class="v6" style="display:none">IPV6地址:</span></label>
+                    <input class="form-control input-feedback v4" type="text" data-id="$elementId$_txtIP" id="$elementId$_txtIP" placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1"/>
+                    <input class="form-control input-feedback v6" type="text" data-id="$elementId$_txtIP6" id="$elementId$_txtIP6" style="display:none"/>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>MAC:</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtMac" id="$elementId$_txtMac" placeholder="(格式：1A:2B:3C:66:DE:88)" title="格式：1A:2B:3C:66:DE:88" />
+                </div>
+            </div>
+            &lt;!&ndash;<div class="col-sm-12 col-md-2">
+                <div class="form-group">
+                    <label>接口:</label>
+                    <select class="form-control">
+                        <option value="">P2</option>
+                        <option value="">P3</option>
+                        <option value="">P4</option>
+                        <option value="">P5</option>
+                    </select>
+                </div>
+            </div>&ndash;&gt;
+            <hr/>
+            <div class="col-sm-12 col-md-1" style="float: right">
+                <button type="button" class="btn btn-primary" data-id="$elementId$_btnAdd" id="$elementId$_btnAdd">
+                    <i class="fa fa-plus"></i>添加
+                </button>
+            </div>
+        </div>
+        <hr/>-->
+        <div class="stable-toolbar row button-box">
+            <div class="col-sm-12 col-md-8 left-toolbar">
+                <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+                    <i class="fa fa-refresh"></i>刷新
+                </button>
+                <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnEnable" id="$elementId$_btnEnable">
+                    <i class="fa fa-check-square-o"></i>启用所有
+                </button>
+                <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDisable" id="$elementId$_btnDisable">
+                    <i class="fa fa-minus-circle"></i>禁用所有
+                </button>
+                <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnExport" id="$elementId$_btnExport">
+                    <i class="fa fa-share"></i>导出全部数据
+                </button>
+                <button class="btn btn-info btn-sm" data-id="$elementId$_btnImport" id="$elementId$_btnImport">
+                    <i class="fa fa-reply"></i>导入数据
+                </button>
+                <form id="importProtoForm" style="display: none">
+                    <input type="file" style="display: none" name="file" id="$elementId$_file" accept=".csv"/>
+                    <input type="text" style="display: none" name="loginuser" id="loginuser">
+                    <input type="submit" name="submit" value="Submit"/>
+                </form>
+                <button class="btn btn-info btn-sm" data-id="$elementId$_btnDelAll" id="$elementId$_btnDelAll">
+                    <i class="fa fa-trash-o"></i>删除全部
+                </button>
+            </div>
+            <div class="col-sm-12 col-md-3 right-toolbar" style="float:right;">
+                <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+                    <i class="fa fa-filter"></i>高级搜索
+                </button>
+                <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnAddShow" id="$elementId$_btnAddShow">
+                    <i class="fa fa-plus"></i>新增
+                </button>
+            </div>
+        </div>
+        <div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter_add" id="$elementId$_divFilter_add">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>地址类型:</label>
+                    <input type="radio" class="dxinput" name="iptype" id="$elementId$_iptype4" value="4" checked/><label for="$elementId$_iptype4"></label><label>IPV4</label>
+                    <input type="radio" class="dxinput" name="iptype" id="$elementId$_iptype6" value="6"/><label for="$elementId$_iptype6"></label><label>IPV6</label>
+                </div>
+            </div>
+            <hr/>
+            <!--<div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>规则名称:</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevice" id="$elementId$_txtDevice" />
+                </div>
+            </div>-->
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label><span class="v4">IPV4地址:</span><span class="v6" style="display:none">IPV6地址:</span></label>
+                    <input class="form-control input-feedback v4" type="text" data-id="$elementId$_txtIP" id="$elementId$_txtIP" placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1"/>
+                    <input class="form-control input-feedback v6" type="text" data-id="$elementId$_txtIP6" id="$elementId$_txtIP6" style="display:none"/>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>MAC地址:</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtMac" id="$elementId$_txtMac" placeholder="(格式：1A:2B:3C:66:DE:88)" title="格式：1A:2B:3C:66:DE:88" />
+                </div>
+            </div>
+            <hr/>
+            <div class="col-sm-12 col-md-12 right-toolbar">
+                <button type="button" class="btn btn-primary" data-id="$elementId$_btnAdd" id="$elementId$_btnAdd">
+                    <i class="fa fa-plus"></i>添加
+                </button>
+            </div>
+        </div>
+        <div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter_ser" id="$elementId$_divFilter_ser">
+            <!--<div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>规则名称:</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevName" id="$elementId$_txtDevName" />
+                </div>
+            </div>-->
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label><span>IP地址:</span></label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevIp" id="$elementId$_txtDevIp"/>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>MAC地址:</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevMac" id="$elementId$_txtDevMac"/>
+                </div>
+            </div>
+            <hr/>
+            <div class="col-sm-12 col-md-12 right-toolbar">
+                <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+        </div>
+        <div class="row-table-box">
+            <table style="word-break: break-all" class="table table-hover table-striped" data-id="$elementId$_tdRuleList" id="$elementId$_tdRuleList">
+                <thead>
+                    <tr>
+                        <th class="w-50">序号</th>
+                        <!--<th>规则名称</th>-->
+                        <th>IP地址</th>
+                        <th>MAC地址</th>
+                        <th>启用状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+            </div>
+        </div>
+    </div>
+</div>

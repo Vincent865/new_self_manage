@@ -1,0 +1,87 @@
+﻿<!--白名单学习规则 begin-->
+<div class="row-setting">
+    <div class="row-setting-title">
+        规则学习
+        <button type="button" class="btn btn-primary btn-sm pull-right" data-id="$elementId$_btnStudy" id="$elementId$_btnStudy">
+            <i class="fa fa-spinner"></i>开始学习
+        </button>
+    </div>
+    <div class="setinfor-list">
+        <ul>
+            <li>
+                开始时间:
+                <input type="text" class="setinfor-input Wdate" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:00' })" data-id="$elementId$_txtStartDateTime" id="$elementId$_txtStartDateTime" />
+            </li>
+            <li>
+                学习时长:
+                <select class="form-control setinfor-input" id="$elementId$_ddlStudyDurtion" data-id="$elementId$_ddlStudyDurtion">
+                    <option value="5">5分钟</option>
+                    <option value="30">30分钟</option>
+                    <option value="60">1小时</option>
+                    <option value="120">2小时</option>
+                    <option value="600">10小时</option>
+                    <option value="960">16小时</option>
+                    <option value="1440">1天</option>
+                    <option value="4320">3天</option>
+                    <option value="10080">1周</option>
+                    <option value="20160">2周</option>
+                    <option value="43200">1个月</option>
+                    <option value="129600">3个月</option>
+                </select>
+            </li>
+            <li>
+                清除历史记录:
+                <span class="btn-on-box">
+                    <input type="checkbox" class="btn-on"  data-id="$elementId$_chkFlag" id="$elementId$_chkFlag" />
+                    <label for="$elementId$_chkFlag"></label>
+                </span>
+            </li>
+            <li>
+                <div class="float_left" data-id="$elementId$_divProgressbar" id="$elementId$_divProgressbar">
+                    <div id="progressbar" style="width:380px; margin-top:10px;"><div class="progress-label"></div></div>
+                </div>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<hr />
+<div class="stable-toolbar row button-box">
+    <div class="col-sm-12 col-md-8 left-toolbar">
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+            <i class="fa fa-refresh"></i>刷新
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_chkAll" id="$elementId$_chkAll" isChecked="true">
+            <i class="fa fa-square-o"></i>全选
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnEnable" id="$elementId$_btnEnable">
+            <i class="fa fa-check-circle-o"></i>应用
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDisable" id="$elementId$_btnDisable">
+            <i class="fa fa-trash-o"></i>删除
+        </button>
+
+    </div>
+    <div class="col-sm-12 col-md-4 right-toolbar">
+        规则总数：<span style="color:#26c544;" data-id="$elementId$_lblStudyRuleCount" id="$elementId$_lblStudyRuleCount">0</span>&nbsp;条
+    </div>
+</div>
+<div class="row-table-box">
+    <table class="table table-hover table-striped" data-id="$elementId$_tdWhitelistList" id="$elementId$_tdWhitelistList">
+        <thead>
+            <tr>
+                <th class="w-50">序号</th>
+                <th>设备名称</th>
+                <th>IP地址</th>
+                <th>MAC地址</th>
+                <th>协议</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="row pagination-custom">
+    <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent"></div>
+</div>

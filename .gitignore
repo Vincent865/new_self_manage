@@ -1,0 +1,9 @@
+*.pyc
+.idea/*
+
+static/scripts/libraries/library.js
+static/scripts/screen/base.js
+static/scripts/screen/kea-u1000.js
+static/scripts/screen/kea-u1142.js
+static/scripts/screen/kea-c200.js
+

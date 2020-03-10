@@ -1,0 +1,60 @@
+﻿<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">双因子登录设置</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+        <div class="row-setting">
+            <div class="row-setting-title">
+                Ukey认证设置
+                <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnOpenUkey" data-id="$elementId$_btnOpenUkey">
+                    <i class="fa fa-cog"></i>设置
+                </button>
+            </div>
+            <div class="setinfor-list">
+                <ul>
+                    <li>
+                        开启Ukey认证:
+                        <span class="btn-on-box">
+                            <input type="checkbox" class="btn-on" name="$elementId$_rabRemoteIP" id="$elementId$_rabOpenUkey" />
+                            <label for="$elementId$_rabOpenUkey"></label>
+                        </span>
+                    </li>
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <hr />
+        <form id="$elementId$_UkeyForm">
+            <div class="row-setting">
+                <div class="row-setting-title">
+                    PIN码修改
+                    <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_changePINPwd" data-id="$elementId$_changePINPwd">
+                        <i class="fa fa-cog"></i>确认
+                    </button>
+                </div>
+                <div class="setinfor-list">
+                    <ul>
+                        <li class="clearfloat">
+                            <span style="width:70px;display:inline-block; text-align:right;">原PIN码:</span>
+                            <input type="password" class="setinfor-input" placeholder="请输入原始PIN码" id="$elementId$_oldPassword" data-id="$elementId$_oldPassword" />
+                        </li>
+                        <li class="clearfloat">
+                            <span style="width:70px;display:inline-block; text-align:right;">新PIN码:</span>
+                            <input type="password" class="setinfor-input" placeholder="请输入新PIN码" id="$elementId$_newPassword" data-id="$elementId$_newPassword" datatype="/^(?=.*?\d)(?=.*?[A-Za-z])(?=.*?[!@#])[0-9A-Za-z!@#]{8}$/" errormsg="必须由字母、数字、特殊字符(@,!,#)组成，长度8位" />
+                            <span class="Validform_checktip">必须由字母、数字、特殊字符(@,!,#)组成，长度8位</span>
+                            <span id="$elementId$_newPasswordInfo" data-id="$elementId$_newPasswordInfo" style="padding-left:10px;"></span>
+                        </li>
+                        <li class="clearfloat">
+                            <span style="width:70px;display:inline-block; text-align:right;">PIN码确认:</span>
+                            <input type="password" class="setinfor-input" placeholder="请确认新PIN码" id="$elementId$_newPassword1" data-id="$elementId$_newPassword1" />
+                            <span class="Validform_checktip"></span>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

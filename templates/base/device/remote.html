@@ -1,0 +1,59 @@
+﻿<!--远程登录控制  begin-->
+<div class="row-setting">
+    <div class="row-setting-title">
+        远程登录设置
+        <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnAddRemoteIP" data-id="$elementId$_btnAddRemoteIP">
+            <i class="fa fa-cog"></i>设置
+        </button>
+    </div>
+    <div class="setinfor-list">
+        <ul>
+            <li>
+                远程登录IP控制:
+                <span class="btn-on-box">
+                    <input type="checkbox" class="btn-on" name="$elementId$_rabRemoteIP" id="$elementId$_rabRemoteIP" />
+                    <label for="$elementId$_rabRemoteIP"></label>
+                </span>
+                <div class="setinfor-list" id="$elementId$_divRemoteIP" data-id="$elementId$_divRemoteIP" style="display:block;">
+                    <ul>
+                        <li>
+                            <span>IPV4:</span>
+                            <input type="text" style="width:410px;display: inline-block" class="form-control input-feedback" data-id="$elementId$_txtRemoteIP" id="$elementId$_txtRemoteIP" placeholder="(格式：192.168.2.1,192.168.1.10-192.168.1.100,192.168.0.0/16)" />
+                        </li>
+                        <br/>
+                        <li>
+                            <span>IPV6:</span>
+                            <input type="text" style="width:410px;display: inline-block" class="form-control input-feedback" data-id="$elementId$_txtRemoteIP6" id="$elementId$_txtRemoteIP6" />
+                        </li>
+                    </ul>
+                    <span class="ipformat">*请输入IP地址或者IP地址范围或者IP地址掩码，以逗号分隔</span>
+                    <div class="clearfix"></div>
+                </div>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<hr />
+<div class="row-setting">
+    <div class="row-setting-title">
+        登录安全设置
+        <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnLoginSetting" data-id="$elementId$_btnLoginSetting">
+            <i class="fa fa-cog"></i>设置
+        </button>
+    </div>
+    <div class="setinfor-list">
+        <ul>
+            <li class="clearfloat">
+                系统强制登出时间：
+                <input type="text" class="setinfor-inputmin" maxlength="3" id="$elementId$_txtDeviceLogoutDateTime" data-id="$elementId$_txtDeviceLogoutDateTime">分钟
+            </li>
+            <li class="clearfloat">
+                可尝试登录次数：
+                <input type="text" class="setinfor-inputmin" maxlength="3" id="$elementId$_txtDeviceLogintTimes" data-id="$elementId$_txtDeviceLogintTimes">次
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--远程登录控制  end-->

@@ -1,0 +1,77 @@
+<div class="stable-toolbar row button-box">
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnAddSwitch" id="$elementId$_btnAddSwitch">
+        <i class="fa fa-plus"></i>新增
+    </button>
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRemove" id="$elementId$_btnRemove">
+        <i class="fa fa-trash-o"></i>删除
+    </button>
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnExport" id="$elementId$_btnExportList">
+        <i class="fa fa-share"></i>导出全部数据
+    </button>
+    <button class="btn btn-info btn-sm" data-id="$elementId$_btnImport" id="$elementId$_btnImportList">
+        <i class="fa fa-reply"></i>导入数据
+    </button>
+    <form id="importSwitchForm" style="display: none">
+        <input type="file" style="display: none" name="file" id="$elementId$_file" accept=".csv"/>
+        <input type="text" style="display: none" name="loginuser">
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+    <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+        <i class="fa fa-filter"></i>高级搜索
+    </button>
+</div>
+<div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>设备名</label>
+            <input class="form-control input-feedback" type="text" data-id="$elementId$_txtName" id="$elementId$_txtName" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>IP地址</label>
+            <input class="form-control input-feedback" type="text" data-id="$elementId$_txtIP" id="$elementId$_txtIP" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>类型</label>
+            <input class="form-control input-feedback" type="text" id="$elementId$_txtType" data-id="$elementId$_txtType" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>位置</label>
+            <input class="form-control input-feedback" type="text" id="$elementId$_txtLocate" data-id="$elementId$_txtLocate" />
+        </div>
+    </div>
+    <hr>
+    <div class="col-sm-12 col-md-12 right-toolbar">
+        <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+            <i class="fa fa-search"></i>搜索
+        </button>
+    </div>
+</div>
+<div class="row-table-box">
+    <table class="table table-hover table-striped topotable" data-id="tdSwitchLlist" id="tdSwitchLlist">
+        <thead>
+        <tr>
+            <th class="th-check" style="width:80px">
+                <input type="checkbox" class="chinput" id="$elementId$_selectAll">
+                <label for="$elementId$_selectAll" ></label>全选
+            </th>
+            <th>交换机名称</th>
+            <th>IP</th>
+            <th>类型</th>
+            <th>位置</th>
+            <th style="width:170px">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="row pagination-custom">
+    <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+    </div>
+</div>

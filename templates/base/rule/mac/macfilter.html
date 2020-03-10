@@ -1,0 +1,69 @@
+﻿<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">MAC地址过滤</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+        <div class="filter-box row">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>MAC:</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtMac" id="$elementId$_txtMac" placeholder="(格式：1A:2B:3C:66:DE:88)" title="格式：1A:2B:3C:66:DE:88" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-1" style="float: right">
+                <button type="button" class="btn btn-primary" data-id="$elementId$_btnAdd" id="$elementId$_btnAdd">
+                    <i class="fa fa-plus"></i>添加
+                </button>
+            </div>
+        </div>
+        <hr/>
+        <div class="stable-toolbar row button-box">
+            <div class="col-sm-12 col-md-8 left-toolbar">
+                <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+                    <i class="fa fa-refresh"></i>刷新
+                </button>
+                <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnEnable" id="$elementId$_btnEnable">
+                    <i class="fa fa-check-square-o"></i>启用所有
+                </button>
+                <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDisable" id="$elementId$_btnDisable">
+                    <i class="fa fa-minus-circle"></i>禁用所有
+                </button>
+            </div>
+            <div class="col-sm-12 col-md-4 right-toolbar" style="position: relative">
+                <div style="padding-right: 87px;">
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtMacSearch" id="$elementId$_txtMacSearch" placeholder="MAC地址" style="max-width:300px;float:right;">
+                </div>
+                <button type="button" class="btn btn-primary" data-id="$elementId$__btnSearch" id="$elementId$_btnSearch" style="position:absolute;right:0;">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+            <div class="col-sm-12 col-md-4 right-toolbar">
+                <!--设置处理措施:
+                <input type="radio" checked="checked" class="dxinput" id="macEvent01">
+                <label for="macEvent01"></label>阻断
+                <input type="radio" class="dxinput" id="macEvent02">
+                <label for="macEvent02" style="margin-left:12px"></label>警告-->
+            </div>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" data-id="$elementId$_tdRuleList" id="$elementId$_tdRuleList">
+                <thead>
+                    <tr>
+                        <th style="width:100px;">序号</th>
+                        <th>MAC地址</th>
+                        <th>启用状态</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+            </div>
+        </div>
+    </div>
+</div>

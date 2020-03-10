@@ -1,0 +1,77 @@
+﻿<!--白名单学习规则 begin-->
+<div class="row-setting">
+    <div class="row-setting-title">
+        在线抓包
+        <button type="button" class="btn btn-primary btn-sm pull-right" data-id="$elementId$_btnStartPcap" id="$elementId$_btnStartPcap">
+            <!-- <i class="fa fa-spinner"></i> -->开始抓包
+        </button>
+    </div>
+    <div class="setinfor-list">
+        <ul>
+            <li>
+                文件名:
+                <input type="text" class="form-control setinfor-input" maxlength="32" placeholder="长度不超过32" id="$elementId$_divFilename">
+            </li>
+            <li>
+                文件大小:
+                <input type="number" class="form-control setinfor-input" max="500" min="0" placeholder="最大值500" id="$elementId$_divSize">
+                <span id="size_unit">MB</span>
+            </li>
+            <li>
+                时长:
+                <input type="text" class="form-control Wdate setinfor-input" 
+                onclick="WdatePicker(
+                    {dateFmt:'HH:mm:00',
+                    startDate:'00:00:00',
+                    maxDate:'12:00:00',
+                    errDealMode:1,
+                    qsEnabled:true,
+                    quickSel:['12:00:00','5:00:00','2:00:00','1:00:00','00:30:00']})" 
+                    id="$elementId$_divTime" placeholder="最大可选择12:00:00">
+            </li>
+            <li>
+                <div class="float_left" data-id="$elementId$_divProgressbar" id="$elementId$_divProgressbar">
+                    <div id="progressbar" style="width:380px; margin-top:10px;">
+                        <div class="progress-label"></div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<hr />
+<div class="stable-toolbar row button-box">
+    <div class="col-sm-12 col-md-8 left-toolbar">
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+            <i class="fa fa-refresh"></i>刷新
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDelList" id="$elementId$_btnDelList">
+            <i class="fa fa-trash-o"></i>删除
+        </button>
+
+    </div>
+    <div class="col-sm-12 col-md-4 right-toolbar">
+        总数：<span style="color:#26c544;" data-id="$elementId$_lblPcapRuleCount" id="$elementId$_lblPcapRuleCount">0</span>&nbsp;条
+    </div>
+</div>
+<div class="row-table-box">
+    <table class="table table-hover table-striped" data-id="$elementId$_tdPcapList" id="$elementId$_tdPcapList">
+        <thead>
+            <tr>
+                <th class="th-check" style="width:80px;">
+                    <input type="checkbox" class="chinput" id="$elementId$_selectAll">
+                    <label for="$elementId$_selectAll"></label>全选
+                </th>
+                <th>文件名</th>
+                <th>文件大小</th>
+                <th>抓包时长</th>
+                <th style="width:100px;">操作</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div class="row pagination-custom">
+    <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent"></div>
+</div>

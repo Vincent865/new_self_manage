@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>工控安全审计平台</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!--css-->
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/bootstrap-multiselect.css">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/base.css" />
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/validate.css" />
+    <link rel="shortcut icon" href="/static/themes/images/LOGO_tdhx.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/jquery-ui-1.10.3.custom.min.css"/>
+    <script type="text/javascript">
+        mxBasePath = '../../../static/scripts/libraries/3rdparty/mxgraph/';
+    </script>
+    <script type="text/javascript" src="../../../static/scripts/libraries/3rdparty/mxgraph/js/mxClient.js"></script>
+    <style>
+        div.mxTooltip{
+            padding:5px 8px;
+            font-size:14px;
+            color:yellow;
+            background-color:rgba(0,103,97,0.8);
+        }
+    </style>
+</head>
+<body>
+    <div id="guideContainer">
+    </div>
+    <!--新手指引 Begin
+    <div class="guide">
+        <div class="text">
+            <div class="guidetitle">如何使系统运转起来</div>
+            <p>步骤1：设备管理设置IP</p>
+            <p>步骤2：白名单学习设置</p>
+            <br />
+            <p><a href='javascript:void(0);'>>进入新手引导</a></p>
+        </div>
+        <div class="arrow"><i class="cion-arrow"></i></div>
+    </div>-->
+    <!--新手指引 End-->
+    <div class="header"></div>
+    <div>
+        <div class="nav"></div>
+        <!--Nav End-->
+        <!--Wrapper Begin-->
+        <div class="wrapper">
+            <!--Header Begin-->
+
+            <!--Header End-->
+            <!--Maincontent Begin-->
+            <div class="mian" id="viewContainer"></div>
+            <!--Maincontent End-->
+        </div>
+    </div>
+    <!--Nav Begin-->
+
+    <!--Wrapper End-->
+    <!--服务器上面使用下面library.js，注释上面-->
+    <script type="text/javascript" src="/static/scripts/libraries/global/AppConfig.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/library.js"></script>
+    <!--本地上面使用下面js，注释上面-->
+    <!--<script type="text/javascript" src="/static/scripts/libraries/3rdparty/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jquery/jquery.form.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jquery/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jquery/jquery.typetype.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jquery/Validform_v5.3.2_min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/layer/layer_local.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/AppConfig.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/Constants.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/ScriptLoader.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/URLManager.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/LocalStorageManager.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/TemplateManager.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/AuthManager.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/CookieManager.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/ContentFactory.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/FormatterManager.js"></script>
+    <script async  type="text/javascript" src="/static/scripts/libraries/global/Validation.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jspdf/FileSaver.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jspdf/jspdf.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jspdf/jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jspdf/jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jspdf/jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jspdf/wPDF.js"></script>
+    <script async  type="text/javascript" src="/static/scripts/libraries/3rdparty/echart/echarts-all.js"></script>
+    <script async  type="text/javascript" src="/static/scripts/libraries/3rdparty/jquery/jtopo-0.4.8-min.js"></script>
+    <script async  type="text/javascript" src="/static/scripts/libraries/3rdparty/datepicker/WdatePicker.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/ExtensionControl.js"></script>-->
+
+    <script type="text/javascript" src="/static/scripts/app.js"></script>
+    <script type="text/javascript" src="/static/scripts/view.js"></script>
+    <script type="text/javascript" src="/static/scripts/screen/base.js"></script>
+    <!--<script type="text/javascript" src="/static/scripts/screen/kea-c200.js"></script>-->
+    <!--<script type="text/javascript" src="/static/scripts/screen/kea-u1000.js"></script>-->
+    <!--<script type="text/javascript" src="/static/scripts/screen/kea-u1142.js"></script>-->
+</body>
+</html>

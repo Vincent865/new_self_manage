@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>工控安全审计平台 - 登录</title>
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/layout.css">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/base.css">
+    <link rel="stylesheet" type="text/css" href="/static/themes/css/login.css">
+    <link rel="shortcut icon" href="/static/themes/images/LOGO_tdhx.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="login_bg">
+        <!--登录窗口-->
+        <div class="row login" style=" display:none;position: relative;z-index: 30;">
+            <div class="col-sm-12 col-md-12 text-center login-box">
+                <div class="login_logo"><img src=""></div>
+                <div class="loginbox">
+                    <div class="form-group input-login">
+                        <i class="fa fa-user"></i>
+                        <input type="text" class="form-control style-bx" id="login_txtUserName" autocomplete="off" placeholder="用户名" />
+                    </div>
+                    <div class="form-group input-login">
+                        <i class="fa fa-unlock-alt"></i>
+                        <input type="password" class="form-control" style="display:none;" id="login_newUserPassword" autocomplete="new-password" placeholder="密 码" />
+                        <input type="password" class="form-control" id="login_txtUserPassword"  autocomplete="new-password" placeholder="密 码" />
+                    </div>
+                    <div class="form-group input-login" style="display: none">
+                        <i class="fa fa-key"></i>
+                        <input type="password" class="form-control" id="login_txtUserPin" placeholder="PIN码" />
+                    </div>
+                    <div class="log_text"></div>
+                    <div class="form-group input-login">
+                        <button type="button" class="btn btn-lg btn-block btn-login" id="login_btnLogin">登录</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-6 text-center"> </div>
+        </div>
+        <!--升级进度条-->
+        <div class="progress-bg" style="display: none">
+            <div>
+                <div class="pro-tip">
+                    <span>数据库正在升级，已完成</span>
+                    <span class="pro-num">0%</span>
+                    <span class="pro-done">数据库升级完成，正在部署，请等待...</span>
+                    <span class="pro-toLogin"><a href="" onclick="location.reload()">点击此处登录>></a></span>
+                </div>
+                <div class="progress progress-striped active">
+                    <div class="progress-bar progress-bar-success" role="progressbar"
+                         aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"
+                         style="width: 0%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--模糊效果-->
+        <div class="blur progress-bg" style="display: none"></div>
+        <div class="row login_bottom">
+            <div class="col-sm-12 col-md-6 text-center login_font"></div>
+            <div class="col-sm-12 col-md-12 text-center copyright">
+                <img src="/static/themes/images/copyright.png"><br>
+                版权所有  2013 - 2019 北京天地和兴科技有限公司保留所有权利 智能工业网络安全专家
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/md5/jQuery.md5.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/3rdparty/bootstrap/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/AppConfig.js"></script>
+    <script type="text/javascript" src="/static/scripts/libraries/global/AuthManager.js"></script>
+    <script async type="text/javascript" src="/static/scripts/libraries/global/URLManager.js"></script>
+    <script async type="text/javascript" src="/static/scripts/libraries/global/LocalStorageManager.js"></script>
+    <script type="text/javascript" src="/static/scripts/login.js"></script>
+    <script type="text/javascript">
+        function login() {
+            switch (APPCONFIG.PRODUCT) {
+                case "KEA-C200":
+                    $(".login_logo>img").attr("src", "/static/themes/skin/kea-c200/images/login-logo.png");
+                    break;
+                case "KEA-U1000":
+                    $(".login_logo>img").attr("src", "/static/themes/skin/kea-u1000/images/login-logo.png");
+                    break;
+                case "KEA-U1142":
+                    $(".login_logo>img").attr("src", "/static/themes/skin/kea-u1142/images/login-logo.png");
+                    break;
+            }
+            $("button").on("click", function () {
+                initializeLoginScreen();
+            });
+            $(document).on("keydown", function (e) {
+                if (e.keyCode == 13) {
+                    $("#login_btnLogin").click();
+                }
+            });
+        }
+        window.onload=function (){
+            try {
+                var link = APPCONFIG[APPCONFIG.PRODUCT].HTTP_URL + "/progress";
+                var promise = URLManager.getInstance().ajaxCall(link);
+                promise.fail(function (jqXHR, textStatus, err) {
+                    $(".login").show();
+                    console.log(textStatus + " - " + err.message);
+                });
+                promise.done(function (result) {
+                    $(".progress-bg").show();
+                    $(".pro-done").hide();
+                    $(".pro-toLogin").hide();
+                    if (typeof (result) != "undefined") {
+                        if(result.status==1){
+                            var progressTimer=setInterval(function(){
+                                URLManager.getInstance().ajaxCall(link).done(function(result){
+                                    $(".pro-num").html(result.progress+"%");
+                                    $(".progress-bar").css("width",result.progress+"%");
+                                    if(result.progress>=100){
+                                        clearInterval(progressTimer);
+                                        $(".pro-done").show().siblings().hide();
+                                        var progressDown=setTimeout(function(){
+                                            $(".pro-toLogin").show().siblings().hide();
+                                        },15000);
+                                    }
+                                });
+                            },3000);
+                        }else{
+                            console.log("数据库升级失败");
+                        }
+                    }
+                });
+            }
+            catch (err) {
+                console.error("ERROR - HeaderController.getprogress() - Unable to get system datetime: " + err.message);
+            }
+        };
+        isPinCodeAction();
+        login();
+    </script>
+</body>
+</html>

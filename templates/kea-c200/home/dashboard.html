@@ -1,0 +1,133 @@
+﻿<!--<div class="row">
+    <div class="col-sm-12 col-md-12 row-three">
+        <div class="chart-content">
+            <select class="form-control chart-flow" id="$elementId$_ddlTime1">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+            </select>
+            <div style="height:200px" id="$elementId$_divInterface" data-id="$elementId$_divInterface"></div>
+        </div>
+    </div>
+</div>-->
+<div class="row">
+    <div class="col-sm-12 col-md-4 row-three">
+        <div class="chart-content">
+            <select class="form-control chart-flow" style="display:none" id="$elementId$_ddlTime1">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+            </select>
+            <div style="height:200px" id="$elementId$_divInterface" data-id="$elementId$_divInterface"></div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4 row-three">
+        <div class="chart-content">
+            <select class="form-control chart-flow" style="display:none" id="$elementId$_ddlTime2">
+                <option value="1">最近一小时</option>
+                <option value="24">最近一天</option>
+                <option value="168">最近一周</option>
+            </select>
+            <div style="height:200px" id="$elementId$_divDevice" data-id="$elementId$_divDevice"></div>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4 row-three">
+        <div class="chart-content">
+            <select class="form-control chart-flow" style="display:none" id="$elementId$_ddlTime3">
+                <option value="1">最近一小时</option>
+                <option value="24">最近一天</option>
+                <option value="168">最近一周</option>
+            </select>
+            <div style="height:200px" id="$elementId$_divProtocol" data-id="$elementId$_divProtocol"></div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-4 row-three">
+        <div class="chart-content" id="$elementId$_cpuState" data-id="$elementId$_cpuState">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4 row-three">
+        <div class="chart-content" id="$elementId$_memoryState" data-id="$elementId$_memoryState">
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4 row-three">
+        <div class="chart-content" id="$elementId$_diskState" data-id="$elementId$_diskState">
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="event-box">
+        <div class="col-sm-12 col-md-4 row-event">
+            <section style="background:#F48F65;">
+                <div class="event-title">
+                    <i class="fa fa-envelope"></i>未读事件
+                </div>
+                <a href="javascript:void(0);" class="event-number" data-id="$elementId$_noReadNum" id="$elementId$_noReadNum">0</a>
+            </section>
+        </div>
+        <div class="col-sm-12 col-md-4 row-event">
+            <section style="background:#6CBDDD;">
+                <div class="event-title">
+                    <i class="fa fa-calendar"></i>今日事件
+                </div>
+                <a href="javascript:void(0);" class="event-number" data-id="$elementId$_todayEventNum" id="$elementId$_todayEventNum">0</a>
+            </section>
+        </div>
+        <div class="col-sm-12 col-md-4 row-event">
+            <section style="background:#7DC7BE;">
+                <div class="event-title">
+                    <i class="fa fa-history"></i>历史事件
+                </div>
+                <a href="javascript:void(0);" class="event-number" data-id="$elementId$_historyEventNum" id="$elementId$_historyEventNum">0</a>
+            </section>
+        </div>
+    </div>
+    <div class="socket">
+        <div class="socket-content">
+            <ul class="portbox">
+                <li><span>RUN<img id="$elementId$_runLight" data-id="$elementId$_runLight" src="/static/themes/skin/kea-c200/images/portbox_green_blink.gif" /></span></li>
+                <li><span>POWER<img id="$elementId$_powerLight" data-id="$elementId$_powerLight" src="/static/themes/skin/kea-c200/images/portbox_green.png" /></span></li>
+                <li><span>FIND<img id="$elementId$_findLight" data-id="$elementId$_findLight" src="/static/themes/skin/kea-c200/images/portbox_gray.png" /></span></li>
+                <li><span>ALARM<img id="$elementId$_alarmLight" data-id="$elementId$_alarmLight" src="/static/themes/skin/kea-c200/images/portbox_gray.png" /></span></li>
+            </ul>
+            <ul class="jackbox">
+                <li><p>MGMT</p><img id="$elementId$_mgmtPort" data-id="$elementId$_mgmtPort" src="/static/themes/skin/kea-c200/images/jackbox_no.png" /></li>
+                <li><p>P0</p><img id="$elementId$_p0Port" data-id="$elementId$_p0Port" src="/static/themes/skin/kea-c200/images/jackbox_no.png" /></li>
+                <li><p>P1</p><img id="$elementId$_p1Port" data-id="$elementId$_p1Port" src="/static/themes/skin/kea-c200/images/jackbox_yes.png" /></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-3 row-event">
+        <section style="background:#688EE9;">
+            <div class="event-title">
+                <i class="fa fa-cubes"></i>规则总数
+            </div>
+            <a href="javascript:void(0);" class="event-number" data-id="$elementId$_ruleNum" id="$elementId$_ruleNum">0</a>
+        </section>
+    </div>
+    <div class="col-sm-12 col-md-3 row-event">
+        <section style="background:#A273E2;">
+            <div class="event-title">
+                <i class="fa fa-file-text-o"></i>白名单
+            </div>
+            <a href="javascript:void(0);" class="event-number" data-id="$elementId$_whiteNum" id="$elementId$_whiteNum">0</a>
+        </section>
+    </div>
+    <div class="col-sm-12 col-md-3 row-event">
+        <section style="background:#4F95D2;">
+            <div class="event-title">
+                <i class="fa fa-file-text"></i>黑名单
+            </div>
+            <a href="javascript:void(0);" class="event-number" data-id="$elementId$_blackNum" id="$elementId$_blackNum">0</a>
+        </section>
+    </div>
+    <div class="col-sm-12 col-md-3 row-event">
+        <section style="background:#6B6CCE;">
+            <div class="event-title">
+                <i class="fa fa-laptop"></i>IP/MAC
+            </div>
+            <a href="javascript:void(0);" class="event-number" data-id="$elementId$_ipmacNum" id="$elementId$_ipmacNum">0</a>
+        </section>
+    </div>
+</div>

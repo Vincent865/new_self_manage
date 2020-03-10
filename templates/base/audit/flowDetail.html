@@ -1,0 +1,55 @@
+﻿<div class="flow-content">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active" data-id="$elementId$_tabHisFlow">历史流量</li>
+            <li data-id="$elementId$_tabRealFlow">实时流量</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent" data-id="$elementId$_hisHolder" id="$elementId$_hisHolder">
+        <div class="pops-content">
+            <div class="row row-flowport-box">
+                <select class="form-control chart-flow" id="$elementId$_ddlTime2">
+                    <option value="1">最近一小时</option>
+                    <option value="24">最近一天</option>
+                    <option value="168">最近一周</option>
+                </select>
+                <br/>
+                <div style="height:90%; width:70%" data-id="$elementId$_divPieChart" id="$elementId$_divPieChart"></div>
+            </div>
+            <div class="row-table-box">
+                <table class="table table-hover table-striped" id="$elementId$_tdFlowList"></table>
+            </div>
+            <div class="row pagination-custom">
+                <div class="text-right col-xs-12" id="$elementId$_pagerContent"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row-cutcontent" style="display:none;" data-id="$elementId$_realHolder" id="$elementId$_realHolder">
+        <div style="font-style:italic;font-weight:bold;">预定义协议流量：</div>
+        <div class="pops-content">
+            <div style="height:340px;width:100%;" data-id="$elementId$_divLineChart" id="$elementId$_divLineChart"></div>
+        </div>
+        <div style="font-style:italic;font-weight:bold;">自定义协议流量：</div>
+        <div class="pops-content">
+            <div style="height:340px;width:100%;" data-id="$elementId$_cusDivLineChart" id="$elementId$_cusDivLineChart"></div>
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="pops-box">
+    <div class="pops-content">
+        <div class="row row-flowport-box">
+                <select class="form-control chart-flow" id="$elementId$_ddlTime2">
+                    <option value="1">最近一小时</option>
+                    <option value="24">最近一天</option>
+                    <option value="168">最近一周</option>
+                </select>
+            <br/>
+            <div style="height:90%; width:70%" data-id="$elementId$_divPieChart" id="$elementId$_divPieChart"></div>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" id="$elementId$_tdFlowList">
+            </table>
+        </div>
+        <div class="row paginat

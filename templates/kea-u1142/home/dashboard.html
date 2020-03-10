@@ -1,0 +1,282 @@
+﻿<div class="row" id="homeview">
+    <div style="width:23%;" class="col-sm-12 col-md-2 row-event">
+            <section class="boardtop" style="padding-right:0px;">
+                <div class="event-title">
+                    <!--<i class="fa fa-envelope"></i>-->系统信息
+                </div>
+                <p class="pcont">
+                    产品型号：<span>HX-IMAP</span>
+                    <br/>
+                    产品版本：<span>V2.0</span>
+                    <br/>
+                    产品序列号：<span id="$elementId$_sysSerialNum" data-id="$elementId$_sysSerialNum"></span>
+                    <br/>
+                    管理地址(IPV4)：<span id="$elementId$_sysClientIP" data-id="$elementId$_sysClientIP"></span>
+                    <br/>
+                    <span class="ip6" style="display: none">
+                        管理地址(IPV6)：<span id="$elementId$_sysClientIP6" data-id="$elementId$_sysClientIP6"></span>
+                        <br/>
+                    </span>
+                    <!-- 软件版本：<span id="$elementId$_sysSoftware" data-id="$elementId$_sysSoftware"></span>
+                    <br/> -->
+                    运行时间：<span id="$elementId$_sysRunTime" data-id="$elementId$_sysRunTime"></span>
+                </p>
+                <!-- <a href="javascript:void(0);" class="event-number" data-id="$elementId$_noReadNum" id="$elementId$_noReadNum">0</a>-->
+            </section>
+        </div>
+    <div class="col-sm-12 col-md-2 row-event">
+        <section class="boardtop dbinfo">
+            <div class="event-title">
+                <!--<i class="fa fa-history"></i>-->事件信息
+            </div>
+            <div class="col-sm-5 col-md-5 profrm">
+                <img src="../../../static/themes/skin/kea-u1142/images/2.png"/>
+                <p id="$elementId$_indexTodayEventNum" data-id="$elementId$_indexTodayEventNum" class="proinfo curev"></p>
+                <p class="protxt">实时安全事件</p>
+            </div>
+            <div class="col-sm-5 col-md-5 profrm">
+                <img src="../../../static/themes/skin/kea-u1142/images/1.png"/>
+                <p id="$elementId$_indexHistoryEventNum" data-id="$elementId$_indexHistoryEventNum" class="proinfo safeev"></p>
+                <p class="protxt">历史安全事件</p>
+            </div>
+            <!-- <a href="javascript:void(0);" class="event-number" data-id="$elementId$_historyEventNum" id="$elementId$_historyEventNum">0</a>-->
+        </section>
+    </div>
+    <div style="width:10.333333%" class="col-sm-12 col-md-2 row-event">
+        <section class="boardtop dbinfo">
+            <div class="event-title">
+                <!--<i class="fa fa-history"></i>-->资产信息
+            </div>
+            <div class="col-sm-12 col-md-12 profrm">
+                <img src="../../../static/themes/skin/kea-u1142/images/5.png"/>
+                <p id="$elementId$_indexAssetNum" data-id="$elementId$_indexAssetNum" class="proinfo safeev"></p>
+                <p class="protxt">拓扑资产总数</p>
+            </div>
+            <!-- <a href="javascript:void(0);" class="event-number" data-id="$elementId$_historyEventNum" id="$elementId$_historyEventNum">0</a>-->
+        </section>
+    </div>
+        <div class="col-sm-12 col-md-2 row-event">
+            <section  class="boardtop dbinfo">
+                <div class="event-title">
+                    <!--<i class="fa fa-calendar"></i>-->产品信息
+                </div>
+                <div class="col-sm-5 col-md-5 profrm">
+                    <img src="../../../static/themes/skin/kea-u1142/images/6.png"/>
+                    <p class="proinfo protocal">24</p>
+                    <p class="protxt">支持协议</p>
+                </div>
+                <!--<div class="col-sm-12 col-md-5 profrm">
+                    <img src="../../../static/themes/skin/kea-u1142/images/4.png"/>
+                    <span class="proinfo device">36</span>
+
+                    <p class="protxt">支持工控设备</p>
+                </div>-->
+                <div class="col-sm-5 col-md-5 profrm">
+                    <img src="../../../static/themes/skin/kea-u1142/images/3.png"/>
+                    <p id="$elementId$_indexBlackNum" data-id="$elementId$_indexBlackNum" class="proinfo blist"></p>
+
+                    <p class="protxt">漏洞条目</p>
+                </div>
+				<!--<img src="../../../static/themes/skin/kea-u1142/images/jackbox_yes.png" />支持协议
+				<img src="../../../static/themes/skin/kea-u1142/images/jackbox_yes.png" />  支持工控设备
+				<img src="../../../static/themes/skin/kea-u1142/images/jackbox_yes.png" />   黑名单 -->
+               <!-- <a href="javascript:void(0);" class="event-number" data-id="$elementId$_todayEventNum" id="$elementId$_todayEventNum">0</a>-->
+            </section>
+        </div>
+
+		<div class="col-sm-12 col-md-4 row-event">
+            <section  class="boardtop">
+                <div class="event-title">
+                    <!--<i class="fa fa-history"></i>-->设备信息
+                </div>
+		
+		  <div class="socket-content" >
+            <ul class="portbox">
+                <li><span>POWER<img id="$elementId$_powerLight" data-id="$elementId$_powerLight"  src="/static/themes/skin/kea-u1142/images/portbox_green.png" /></span></li>
+                <li><span>HDD<img id="$elementId$_hddLight" data-id="$elementId$_hddLight"  src="/static/themes/skin/kea-u1142/images/portbox_gray.png" /></span></li>
+            </ul>
+            <ul class="jackbox">
+                <li><p>MGMT</p><img id="$elementId$_mgmtPort" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>ETH1</p><img id="$elementId$_p1Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>ETH2</p><img id="$elementId$_p2Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>ETH3</p><img id="$elementId$_p3Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li class="type_1"><p>ETH4</p><img id="$elementId$_p4Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li class="type_1"><p>ETH5</p><img id="$elementId$_p5Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <!--<li><p>P3</p><img id="$elementId$_p3Port" src="/static/themes/skin/kea-u1142/images/jackbox-p0_no.png" /></li>
+                <li><p>P4</p><img id="$elementId$_p4Port" src="/static/themes/skin/kea-u1142/images/jackbox-p0_no.png" /></li>-->
+                <!--<li><p>P5</p><img id="$elementId$_p5Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>P6</p><img id="$elementId$_p6Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>-->
+                <!--<li><p>EXT</p><img id="$elementId$_extPort" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>-->
+
+            </ul>
+        </div>
+        <ul class="db_device_info">
+            <li id="$elementId$_cpu">
+                <div>CPU利用率: <span></span>%</div>
+                <div><progress value="" max="100"></progress></div>
+            </li>
+            <li id="$elementId$_memory">
+                <div>内存利用率: <span></span>%</div>
+                <div><progress value="" max="100"></progress></div>
+            </li>
+            <li id="$elementId$_disk">
+                <div>磁盘利用率: <span></span>%</div>
+                <div><progress value="" max="100"></progress></div>
+            </li>
+        </ul>
+                <!--<a href="javascript:void(0);" class="event-number" data-id="$elementId$_historyEventNum" id="$elementId$_historyEventNum">0</a>-->
+            </section>
+        </div>
+		<!--<div class="col-sm-12 col-md-1 row-event">
+			<section style="background:#7DC7BE;">
+                <div class="event-title">
+                   &nbsp;
+                </div>
+				<hr>
+					cpu使用率：
+					
+               <!-- <a href="javascript:void(0);" class="event-number" data-id="$elementId$_historyEventNum" id="$elementId$_historyEventNum">0</a>
+            </section>
+		</div>-->
+    <!--<div class="socket">
+        <div class="socket-content">
+            <ul class="portbox">
+                <li><span>POWER<img id="$elementId$_powerLight" data-id="$elementId$_powerLight"  src="/static/themes/skin/kea-u1142/images/portbox_green.png" /></span></li>
+                <li><span>HDD<img id="$elementId$_hddLight" data-id="$elementId$_hddLight"  src="/static/themes/skin/kea-u1142/images/portbox_gray.png" /></span></li>
+            </ul>
+            <ul class="jackbox">
+                <li><p>P1</p><img id="$elementId$_p1Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>P2</p><img id="$elementId$_p2Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>P3</p><img id="$elementId$_p3Port" src="/static/themes/skin/kea-u1142/images/jackbox-p0_no.png" /></li>
+                <li><p>P4</p><img id="$elementId$_p4Port" src="/static/themes/skin/kea-u1142/images/jackbox-p0_no.png" /></li>
+                <li><p>P5</p><img id="$elementId$_p5Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>P6</p><img id="$elementId$_p6Port" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>EXT</p><img id="$elementId$_extPort" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+                <li><p>MGMT</p><img id="$elementId$_mgmtPort" src="/static/themes/skin/kea-u1142/images/jackbox_no.png" /></li>
+            </ul>
+        </div>
+    </div>-->
+</div>
+<!--<div class="row">
+    <div class="col-sm-12 col-md-3 row-event">
+        <section style="background:#688EE9;">
+            <div class="event-title">
+                <i class="fa fa-cubes"></i>规则总数
+            </div>
+            <a href="javascript:void(0);" class="event-number" data-id="$elementId$_ruleNum" id="$elementId$_ruleNum">0</a>
+        </section>
+    </div>
+    <div class="col-sm-12 col-md-3 row-event">
+        <section style="background:#A273E2;">
+            <div class="event-title">
+                <i class="fa fa-file-text-o"></i>白名单
+            </div>
+            <a href="javascript:void(0);" class="event-number" data-id="$elementId$_whiteNum" id="$elementId$_whiteNum">0</a>
+        </section>
+    </div>
+    <div class="col-sm-12 col-md-3 row-event">
+        <section style="background:#4F95D2;">
+            <div class="event-title">
+                <i class="fa fa-file-text"></i>黑名单
+            </div>
+            <a href="javascript:void(0);" class="event-number" data-id="$elementId$_blackNum" id="$elementId$_blackNum">0</a>
+        </section>
+    </div>
+    <div class="col-sm-12 col-md-3 row-event">
+        <section style=" background:#6B6CCE;">
+            <div class="event-title">
+                <i class="fa fa-laptop"></i>IP/MAC
+            </div>
+            <a href="javascript:void(0);" class="event-number" data-id="$elementId$_ipmacNum" id="$elementId$_ipmacNum">0</a>
+        </section>
+    </div>
+</div>-->
+<div class="row">
+    <div class="col-sm-12 col-md-6 row-three">
+        <div class="chart-content">
+            <!--<select class="form-control chart-flow" style="display:none" id="$elementId$_ddlTime1">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+            </select>-->
+			
+            <div style="height:260px" id="$elementId$_divInterface" data-id="$elementId$_divInterface"></div>
+			
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 row-three">
+        <div class="chart-content">
+            <!--<select class="form-control chart-flow" style="display:none" id="$elementId$_ddlTime2">
+                <option value="1">最近一小时</option>
+                <option value="24">最近一天</option>
+                <option value="168">最近一周</option>
+            </select>-->
+			<div style="height:260px" id="$elementId$_divSessionNum" data-id="$elementId$_divSessionNum"></div>
+            <!--<div style="height:250px" id="$elementId$_divDevice" data-id="$elementId$_divDevice"></div>-->
+			<!--<div class="chart-content" id="$elementId$_cpuState" data-id="$elementId$_cpuState"></div>-->
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 row-three">
+        <div class="chart-content">
+            <!--<select class="form-control chart-flow" style="display:none" id="$elementId$_ddlTime1">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+            </select>-->
+
+            <div style="height:260px" id="$elementId$_divEvent" data-id="$elementId$_divEvent"></div>
+
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-6 row-three">
+        <div class="chart-content">
+            <!--<select class="form-control chart-flow" style="display:none" id="$elementId$_ddlTime1">
+                <option value="P0">P0</option>
+                <option value="P1">P1</option>
+            </select>-->
+
+            <div style="height:260px" id="$elementId$_divLiverate" data-id="$elementId$_divLiverate"></div>
+
+        </div>
+    </div>
+  <!--  <div class="col-sm-12 col-md-4 row-three">
+        <div class="chart-content">
+            <select class="form-control chart-flow" style="display:none" id="$elementId$_ddlTime3">
+                <option value="1">最近一小时</option>
+                <option value="24">最近一天</option>
+                <option value="168">最近一周</option>
+            </select>
+            <div style="height:200px" id="$elementId$_divProtocol" data-id="$elementId$_divProtocol"></div>
+        </div>
+    </div>-->
+</div>
+<div class="row">
+    <div class="col-sm-12 col-md-6 row-three">
+		<div class="chart-content">
+			<div>
+                <span style="position:absolute;top:15px;right:155px;">(最近1小时数据)</span>
+                <select id="$elementId$_btnDevice" style="outline:none;position:absolute;z-index: 999;">
+                    <option value="1">饼状图</option>
+                    <option value="2">柱状图</option>
+                </select>
+            </div>
+			<div style="height:300px" id="$elementId$_divDevice" data-id="$elementId$_divDevice"></div>
+			
+		</div>
+    </div>
+    <div class="col-sm-12 col-md-6 row-three">
+        <div class="chart-content">
+            <div>
+                <span style="position:absolute;top:15px;right:155px;">(最近1小时数据)</span>
+                <select id="$elementId$_btnProto" style="outline:none;position:absolute;z-index: 999;">
+                    <option value="1">饼状图</option>
+                    <option value="2">柱状图</option>
+                </select>
+            </div>
+             <div style="height:300px" id="$elementId$_divProtocol" data-id="$elementId$_divProtocol"></div>
+			<!--<div class="chart-content" id="$elementId$_memoryState" data-id="$elementId$_memoryState"></div>-->
+		</div>
+    </div>
+    <!--<div class="col-sm-12 col-md-4 row-three">
+        <div class="chart-content" id="$elementId$_diskState" data-id="$elementId$_diskState">
+        </div>
+    </div>-->
+</div>

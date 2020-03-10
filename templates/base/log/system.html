@@ -1,0 +1,54 @@
+﻿<div class="stable-toolbar row button-box">
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+        <i class="fa fa-refresh"></i>刷新
+    </button>
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnExport" id="$elementId$_btnExport">
+        <i class="fa fa-share"></i>导出全部日志
+    </button>
+    <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+        <i class="fa fa-filter"></i>高级搜索
+    </button>
+</div>
+<div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>开始时间</label>
+            <input type="text" class="Wdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', maxDate: '#F{$dp.$D(\'$elementId$_txtEndDateTime\')}' })" data-id="$elementId$_txtStartDateTime" id="$elementId$_txtStartDateTime" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>结束时间</label>
+            <input type="text" class="Wdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', minDate: '#F{$dp.$D(\'$elementId$_txtStartDateTime\')}' })" data-id="$elementId$_txtEndDateTime" id="$elementId$_txtEndDateTime" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>内容</label>
+            <input class="form-control input-feedback" type="text" maxlength="50" data-id="$elementId$_txtLogContent" id="$elementId$_txtLogContent" placeholder="不能输入特殊字符（#￥%&...）" />
+        </div>
+    </div>
+    <hr>
+    <div class="col-sm-12 col-md-12 right-toolbar">
+        <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+            <i class="fa fa-search"></i>搜索
+        </button>
+    </div>
+</div>
+<div class="row-table-box">
+    <table class="table table-hover table-striped" data-id="$elementId$_tdLogList" id="$elementId$_tdLogList">
+        <thead>
+            <tr>
+                <th>时间</th>
+                <th>日志等级</th>
+                <th>日志类型</th>
+                <th>内容</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+<div class="row pagination-custom">
+    <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+    </div>
+</div>

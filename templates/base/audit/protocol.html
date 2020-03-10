@@ -1,0 +1,118 @@
+﻿<!--协议审计  Begin-->
+<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">协议审计</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+        <div class="stable-toolbar row button-box">
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+                <i class="fa fa-refresh"></i>刷新
+            </button>
+            <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+                <i class="fa fa-filter"></i>高级搜索
+            </button>
+        </div>
+        <div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>源设备名</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSName" id="$elementId$_txtSName" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>源IP</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtIP" id="$elementId$_txtIP" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>源MAC</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtMac" id="$elementId$_txtMac" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>源端口</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtPort" id="$elementId$_txtPort" />
+                </div>
+            </div>
+       
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>目的设备名</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDName" id="$elementId$_txtDName" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>目的IP</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDIP" id="$elementId$_txtDIP" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>目的MAC</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDMac" id="$elementId$_txtDMac" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>目的端口</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDPort" id="$elementId$_txtDPort" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>时间</label>
+                    <select class="form-control" id="$elementId$_ddlTime" data-id="$elementId$_ddlTime">
+                        <option value="0">不限</option>
+                        <option value="1">过去一小时</option>
+                        <option value="24">过去一天</option>
+                        <option value="168">过去一周</option>
+                    </select>
+                </div>
+            </div>
+      
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>协议</label>
+                    <select class="form-control" id="$elementId$_ddlProtocol" data-id="$elementId$_ddlProtocol">
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="col-sm-12 col-md-12 right-toolbar">
+                <button type="button" class="btn btn-primary style-sm" data-id="$elementId$__btnSearch" id="$elementId$_btnSearch">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" data-id="$elementId$_tdProtocolList" id="$elementId$_tdProtocolList">
+                <thead>
+                    <tr>
+                        <th class="w-50">序号</th>
+                        <th>更新时间</th>
+                        <th>起始时间</th>
+                        <th>设备名 </th>
+                        <th>IP地址</th>
+                        <th>MAC地址</th>
+                        <th>端口</th>
+                        <th>协议类型</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+            </div>
+        </div>
+    </div>
+</div>
+<!--协议审计  End-->

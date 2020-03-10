@@ -1,0 +1,49 @@
+﻿<!--管理模式管理  begin-->
+<div class="row-setting">
+    <div class="row-setting-title">
+        管理模式切换
+        <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnMode" data-id="$elementId$_btnMode">
+            <i class="fa fa-cog"></i>设置
+        </button>
+    </div>
+    <div class="setinfor-list">
+        <ul>
+            <li>
+                管理模式切换:
+                <input type="radio" checked="checked" class="dxinput" value="0" name="$elementId$_rabMode" id="$elementId$_rabMode2" data-id="$elementId$_rabMode2" />
+                <label for="$elementId$_rabMode2"></label>集中管理
+                <input type="radio" class="dxinput" name="$elementId$_rabMode" value="1" id="$elementId$_rabMode1" data-id="$elementId$_rabMode1" />
+                <label for="$elementId$_rabMode1" style="margin-left:36px"></label>自管理
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+    <div class="setinfor-list" style="display:none;" id="$elementId$_divMode" data-id="$elementId$_divMode">
+        <ul>
+            <li>
+                <input type="radio" name="$elementId$_rabSelfMode" value="1" checked="checked" class="dxinput" id="$elementId$_rabSelfMode1" data-id="$elementId$_rabSelfMode1" />
+                <label style="margin-left:35px;" for="$elementId$_rabSelfMode1"></label>自动发现安全监管平台
+                <input type="radio" name="$elementId$_rabSelfMode" value="0" class="dxinput" id="$elementId$_rabSelfMode2" data-id="$elementId$_rabSelfMode2" />
+                <label for="$elementId$_rabSelfMode2"></label>
+                手工配置安全监管平台
+                <input type="text" style="margin-left:10px;" class="form-control input-feedback setinfor-input" data-id="$elementId$_txtModeIP" id="$elementId$_txtModeIP" />
+            </li>
+        </ul>
+        <div class="clearfix"></div>
+    </div>
+</div>
+<!--管理模式管理  end-->
+
+<!--<div class="eventinfo_box">
+    <div class="h1">管理模式切换</div>
+    <div class="dediv">
+        <input type="radio" name="$elementId$_rabMode" value="0" class="dxinput" id="$elementId$_rabMode2" data-id="$elementId$_rabMode2" /><label for="$elementId$_rabMode2"></label>集中管理
+        <input type="radio" name="$elementId$_rabMode" value="1" checked="checked" class="dxinput" id="$elementId$_rabMode1" data-id="$elementId$_rabMode1" /><label for="$elementId$_rabMode1" style="margin-left:40px;"></label>自管理
+        <button class="button_cut button_blue" style="margin:0px 0px 0px 30px;" data-id="$elementId$_btnMode" id="$elementId$_btnMode">确认</button>
+    </div>
+    <div class="dediv" id="$elementId$_divMode" data-id="$elementId$_divMode">
+        <input type="radio" name="$elementId$_rabSelfMode" value="1" checked="checked" class="dxinput" id="$elementId$_rabSelfMode1" data-id="$elementId$_rabSelfMode1" /><label style="margin-left:35px;" for="$elementId$_rabSelfMode1"></label>自动发现安全监管平台
+        <input type="radio" name="$elementId$_rabSelfMode" value="0" class="dxinput" id="$elementId$_rabSelfMode2" data-id="$elementId$_rabSelfMode2" /><label for="$elementId$_rabSelfMode2"></label>
+        手工配置安全监管平台<input type="text" style="margin-left:10px;" class="inputde" data-id="$elementId$_txtModeIP" id="$elementId$_txtModeIP" />
+    </div>
+</div>-->

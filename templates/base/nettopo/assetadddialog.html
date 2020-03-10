@@ -1,0 +1,61 @@
+<div class="dialog-content" id="$elementId$_addAsset" style="margin:13px 10px;">
+    <div id="$elementId$_proto_dialog01">
+        <ul>
+            <li>
+                <label>设备名</label>
+                <input class="form-control" type="text"/><span style="color:red;">*</span>
+            </li>
+            <li>
+                <label>IP</label>
+                <input class="form-control" placeholder="(格式：IPV4 或 IPV6地址)" title="(格式：IPV4 或 IPV6地址)" type="text" maxlength="40"/>
+            </li>
+            <li>
+                <label>MAC</label>
+                <input class="form-control" type="text" placeholder="(格式：1A:2B:3C:66:DE:88)" title="(格式：1A:2B:3C:66:DE:88)"/><span style="color:red;">*</span>
+            </li>
+            <li>
+                <label>协议</label>
+                <select class="form-control" id="$elementId$_protopt" multiple="multiple" type="text"/></select>
+            </li>
+            <li>
+                <label>识别方式</label>
+                <input type="radio" class="dxinput" name="autoflag" id="autoflag_0" value="0" checked/><label for="autoflag_0" style="width:18px;"></label>手动
+                <input type="radio" class="dxinput" name="autoflag" id="autoflag_1" value="1"/><label for="autoflag_1" style="width:18px;"></label>自动
+            </li>
+            <li>
+                <label>厂商信息</label>
+                <input class="form-control isauto" type="text">
+                </li>
+            <li>
+                <label>设备类型</label>
+                <select class="form-control isauto">
+                    <option value="0">未知</option>
+                </select>
+            </li>
+            <li>
+                <label>设备型号</label>
+                <input class="form-control isauto" type="text">
+            </li>
+            <li>
+                <label>接入状态</label>
+                <select class="form-control" type="text">
+                    <option value="0">正常接入</option>
+                    <option value="1">非法接入</option>
+                </select>
+            </li>
+            <li>
+                <label>描述</label>
+                <input class="form-control" type="text"/>
+            </li>
+        </ul>
+        <span style="color:red;display:none;">以太网类型不符合规范</span>
+    </div>
+    <div class="button-box" id="$elementId$_detailCtrlBtns">
+        <button class="btn btn-primary">
+            确认
+        </button>
+        <button class="btn btn-danger">
+            取消
+        </button>
+    </div>
+</div>

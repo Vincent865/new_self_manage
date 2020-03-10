@@ -1,0 +1,121 @@
+﻿<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">资产报告</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+        <div class="row-setting">
+            <div class="row-setting-title">
+                资产报告自定义设置
+                <button type="button" data-id="event_btnFilter" id="$elementId$_event_btnFilter" class="btn btn-primary btn-sm pull-right">
+                    <i class="fa fa-cog"></i>自定义设置
+                </button>
+            </div>
+            <div id="$elementId$_advOpt" style="display:none;overflow:hidden;padding-top: 20px;">
+                <!--<div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>设备名</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevName" id="$elementId$_txtDevName" />
+                    </div>
+                </div>-->
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>IPV4地址</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevIP4" id="$elementId$_txtDevIP4"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>IPV6地址</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevIP6" id="$elementId$_txtDevIP6"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4" style="margin-top:4px;height:49px">
+                    *请输入IP地址或者IP地址范围(范围以'-'分隔)，以逗号分隔
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>是否包含二层设备</label>
+                        <input type="radio" class="dxinput" name="report_level" id="$elementId$_level1" value="1" checked/><label for="$elementId$_level1"></label><label>是</label>
+                        <input type="radio" class="dxinput" name="report_level" id="$elementId$_level0" value="0"/><label for="$elementId$_level0"></label><label>否</label>
+                    </div>
+                </div>
+                <!--<div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>设备MAC</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDevMac" id="$elementId$_txtDevMac"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>在线状态</label>
+                        <select class="form-control" data-id="$elementId$_ddlDevStatus" id="$elementId$_ddlDevStatus">
+                            <option value="" selected="selected">全部</option>
+                            <option value="1">在线</option>
+                            <option value="0">离线</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>设备类型</label>
+                        <select class="form-control" data-id="$elementId$_ddlDevType" id="$elementId$_ddlDevType">
+                            <option value="" selected="selected">全部</option>
+                            <option value="0">未知</option>
+                            <option value="1">PC</option>
+                            <option value="2">工程师站PC</option>
+                            <option value="3">操作员PC</option>
+                            <option value="4">PLC</option>
+                            <option value="5">RTU</option>
+                            <option value="6">HMI</option>
+                            <option value="7">网络设备</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>设备身份</label>
+                        <select class="form-control" data-id="$elementId$_ddlDevPosition" id="$elementId$_ddlDevPosition">
+                            <option value="" selected="selected">全部</option>
+                            <option value="0">未知</option>
+                            <option value="1">已知</option>
+                        </select>
+                    </div>
+                </div>-->
+                <div class="col-sm-12" style="float: right;background-color: #f5f5f4;padding:5px 10px;border-top: 1px dotted #aaa;">
+                    <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnGenerate" id="$elementId$_btnGenerate">
+                        <i class="fa fa-cog"></i>生成
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="row-setting">
+            <div class="row-setting-title">
+                定期资产报告设置
+                <button type="button" id="$elementId$_btnSetting" class="btn btn-primary btn-sm pull-right">
+                    <i class="fa fa-cog"></i>设置
+                </button>
+            </div>
+            <div class="form-setting">
+                <label>频率：</label>
+                <select id="$elementId$_ddlDurtion" class="form-control">
+                    <option value=1>每日</option>
+                    <option value=2>每周</option>
+                    <option value=3>每月</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDelete" id="$elementId$_btnDelete">
+                <i class="fa fa-trash-o"></i>删除
+            </button>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" id="$elementId$_tdAssetReportList"></table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" id="$elementId$_pagerContent"></div>
+        </div>
+    </div>
+</div>

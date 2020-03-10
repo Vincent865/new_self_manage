@@ -1,0 +1,46 @@
+﻿<div class="pops-box">
+    <div class="pops-content">
+        <div class="pops-h1"></div>
+        <ul class="pops-list-two">
+            <li><b>设备地址：</b><span id="$elementId$_lblDeviceName" data-id="$elementId$_lblDeviceName"></span></li>
+            <li><b>设备名称：</b><span id="$elementId$_lblDeviceName2" data-id="$elementId$_lblDeviceName2"></span></li>
+            <li><b>高阈值：</b><span id="$elementId$_lblHigh" data-id="$elementId$_lblHigh"></span>&nbsp;Kbps</li>
+            <li><b>低阈值：</b><span id="$elementId$_lblLow" data-id="$elementId$_lblLow"></span>&nbsp;Kbps</li>
+            <li><b>产生事件时流量值：</b><span id="$elementId$_lblFlow" data-id="$elementId$_lblFlow"></span>&nbsp;Kbps</li>
+            <li><b>事件类型：</b><span id="$elementId$_lblType" data-id="$elementId$_lblType"></span></li>
+        </ul>
+        <!--<div class="row row-flowport-box">
+            <div style="height:90%;" id="$elementId$_divChartOne"></div>
+        </div>-->
+        <hr />
+        <div class="row-flowratio-box">
+            <div class="flow_title">
+                <button type="button" class="btn btn-info btn-sm pull-right" style="display:none" id="$elementId$_btnCancleOne">
+                    <i class="fa fa-times-circle"></i>取消
+                </button>
+                <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnDeleteOne">
+                    <i class="fa fa-times"></i>删除
+                </button>
+                <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;display:none" id="$elementId$_btnSaveOne">
+                    <i class="fa fa-check-circle"></i>保存
+                </button>
+                <button type="button" class="btn btn-info btn-sm pull-right" style="margin-right: 10px;" id="$elementId$_btnEditOne">
+                    <i class="fa fa-pencil-square-o"></i>编辑
+                </button>
+                <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divDownOne">
+                    低域值：<input type="text" style="width:50px;" class="fontcolor-success" id="$elementId$_valueDownOne" />
+                </div>
+                <div class="pull-right" style="margin-right:10px; display:none" id="$elementId$_divUpOne">
+                    高域值：<input type="text" style="width:50px;" class="fontcolor-height" id="$elementId$_valueUpOne" />
+                </div>
+            </div>
+            <div style="height:90%; position:relative; margin-top: 30px;" id="$elementId$_divOne">
+                <div style="height:90%;" id="$elementId$_divChartTwo"></div>
+                <div id="$elementId$_sliderOne" style="height: 62%; position: absolute; top: 52px;  right: 3px;  display: none;"></div>
+                <button type="button" class="btn btn-primary btn-sm btn-flow-big" style="display:none" id="$elementId$_btnPluseOne"><i class="fa fa-plus"></i></button>
+                <button type="button" class="btn btn-primary btn-sm btn-flow-small" style="display:none" id="$elementId$_btnReduceOne"><i class="fa fa-minus"></i></button>
+            </div>
+        </div>
+       
+    </div>
+</div>

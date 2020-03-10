@@ -1,0 +1,202 @@
+﻿<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">审计报告</li>
+        </ul>
+    </div>
+    <!--<div  style="overflow: hidden;background: #fff;padding: 11px 19px 0px;margin: 10px 5px 0px;">
+        <div style="overflow:hidden;margin-bottom: 10px;">
+            <button type="button" class="btn btn-primary pull-right" data-id="event_btnFilter"
+                    id="$elementId$_event_btnFilter">
+                <i class="fa fa-filter"></i>自定义配置
+            </button>
+        </div>
+        <div id="$elementId$_advOpt" style="display:none;">
+            <div class="filter-box row">
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>开始时间</label>
+                        <input class="Wdate"
+                               onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', maxDate: '#F{$dp.$D(\'$elementId$_txtAudEndTime\')}' })"
+                               type="text" data-id="$elementId$_txtAudStartTime" id="$elementId$_txtAudStartTime"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>结束时间</label>
+                        <input class="Wdate"
+                               onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', minDate: '#F{$dp.$D(\'$elementId$_txtAudStartTime\')}' })"
+                               type="text" data-id="$elementId$_txtAudEndTime" id="$elementId$_txtAudEndTime"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>源MAC</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSrcMAC"
+                               id="$elementId$_txtSrcMAC"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>源地址</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSrcAddr"
+                               id="$elementId$_txtSrcAddr"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>源端口</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSrcPort"
+                               id="$elementId$_txtSrcPort"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>目的MAC</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDstMAC"
+                               id="$elementId$_txtDstMAC"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>目的地址</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDstAddr"
+                               id="$elementId$_txtDstAddr"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>目的端口</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDstPort"
+                               id="$elementId$_txtDstPort"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>协议</label>
+                        <select class="form-control" id="$elementId$_ddlProtocol" data-id="$elementId$_ddlProtocol">
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12" style="    float: right;background-color: #f5f5f4;padding: 10px;border-top: 1px dotted #aaa;">
+                <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnGenerate"
+                        id="$elementId$_btnGenerate">
+                    <i class="fa fa-cog"></i>生成
+                </button>
+            </div>
+        </div>
+    </div>-->
+
+    <div class="row-cutcontent">
+        <div class="row-setting">
+            <div class="row-setting-title">
+                审计报告自定义设置
+                <button type="button" data-id="event_btnFilter" id="$elementId$_event_btnFilter" class="btn btn-primary btn-sm pull-right">
+                    <i class="fa fa-cog"></i>自定义设置
+                </button>
+            </div>
+            <div id="$elementId$_advOpt" style="display:none;overflow:hidden;padding-top: 20px;">
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>开始时间</label>
+                        <input class="Wdate"
+                               onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', startDate:'#F{$(\'#spanSystemTime\').html()}',maxDate: '#F{$dp.$D(\'$elementId$_txtAudEndTime\')||($(\'#spanSystemTime\').html())}'})"
+                               type="text" data-id="$elementId$_txtAudStartTime" id="$elementId$_txtAudStartTime"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>结束时间</label>
+                        <input class="Wdate"
+                               onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', startDate:'#F{$(\'#spanSystemTime\').html()}',minDate: '#F{$dp.$D(\'$elementId$_txtAudStartTime\')}',maxDate: '#F{$(\'#spanSystemTime\').html()}' })"
+                               type="text" data-id="$elementId$_txtAudEndTime" id="$elementId$_txtAudEndTime"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>源MAC</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSrcMAC"
+                               id="$elementId$_txtSrcMAC" placeholder="(格式：1A:2B:3C:66:DE:88)" title="格式：1A:2B:3C:66:DE:88"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>源地址</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSrcAddr"
+                               id="$elementId$_txtSrcAddr"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>源端口</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtSrcPort"
+                               id="$elementId$_txtSrcPort"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>目的MAC</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDstMAC"
+                               id="$elementId$_txtDstMAC" placeholder="(格式：1A:2B:3C:66:DE:88)" title="格式：1A:2B:3C:66:DE:88"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>目的地址</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDstAddr"
+                               id="$elementId$_txtDstAddr"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>目的端口</label>
+                        <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDstPort"
+                               id="$elementId$_txtDstPort"/>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-4">
+                    <div class="form-group">
+                        <label>协议</label>
+                        <select class="form-control" id="$elementId$_ddlProtocol" data-id="$elementId$_ddlProtocol">
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-12" style="float: right;background-color: #f5f5f4;padding:5px 10px;border-top: 1px dotted #aaa;">
+                    <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnGenerate"
+                            id="$elementId$_btnGenerate">
+                        <i class="fa fa-cog"></i>生成
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="row-setting">
+            <div class="row-setting-title">
+                定期审计报告设置
+                <button type="button" id="$elementId$_btnSetting" class="btn btn-primary btn-sm pull-right">
+                    <i class="fa fa-cog"></i>设置
+                </button>
+            </div>
+            <div class="form-setting">
+                <label>频率：</label>
+                <select id="$elementId$_ddlDurtion" class="form-control">
+                    <option value=1>每日</option>
+                    <option value=2>每周</option>
+                    <option value=3>每月</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDelete" id="$elementId$_btnDelete">
+                <i class="fa fa-trash-o"></i>删除
+            </button>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" id="$elementId$_tdEventlistList"></table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" id="$elementId$_pagerContent"></div>
+        </div>
+    </div>
+</div>  

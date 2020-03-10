@@ -1,0 +1,53 @@
+﻿<div class="stable-toolbar row button-box">
+    <div class="col-sm-12 col-md-8 left-toolbar">
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+            <i class="fa fa-refresh"></i>刷新
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnAdd" id="$elementId$_btnAdd">
+            <i class="fa fa-plus"></i>新增
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDel" id="$elementId$_btnDel">
+            <i class="fa fa-trash-o"></i>删除
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnEnable" id="$elementId$_btnEnable">
+            <i class="fa fa-check-square-o"></i>启用所有
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDisable" id="$elementId$_btnDisable">
+            <i class="fa fa-minus-circle"></i>禁用所有
+        </button>
+        <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnExport" id="$elementId$_btnExportList">
+            <i class="fa fa-share"></i>导出配置
+        </button>
+        <button class="btn btn-info btn-sm" data-id="$elementId$_btnImport" id="$elementId$_btnImportList">
+            <i class="fa fa-reply"></i>导入配置
+        </button>
+        <form id="importListForm" style="display: none">
+            <input type="file" style="display: none" name="file" id="$elementId$_file" accept=".json"/>
+            <input type="text" style="display: none" name="loginuser" id="loginuser">
+            <input type="submit" name="submit" value="Submit"/>
+        </form>
+    </div>
+</div>
+<div class="row-table-box">
+    <table class="table table-hover table-striped" data-id="$elementId$_tdRuleList" id="$elementId$_tdRuleList">
+        <thead>
+            <tr>
+                <th class="th-check">
+                    <input type="checkbox" class="chinput" id="$elementId$_selectAll">
+                    <label for="$elementId$_selectAll"></label>全选
+                </th>
+                <th>协议名称</th>
+                <th>端口</th>
+                <th>协议类型</th>
+                <th>启用状态</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="row pagination-custom">
+    <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+    </div>
+</div>

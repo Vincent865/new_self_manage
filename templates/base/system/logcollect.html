@@ -1,0 +1,102 @@
+<div style="overflow:hidden;padding-bottom:5px;">
+    <div style="width:215px;float:right;">
+        <label>配置类型:</label>
+        <select class="cardtype form-control" id="$elementId$_tabSelt" style="display:inline-block;width:63%;">
+            <option value="0">日志采集配置</option>
+            <option value="1">路由配置</option>
+        </select>
+    </div>
+</div>
+<div class="row-setting">
+    <div id="$elementId$_txtCollectConf">
+        <div class="row-setting-title">
+            日志采集网口配置
+            <button type="button" class="btn btn-primary btn-sm pull-right" data-id="$elementId$_btnEthConf" id="$elementId$_btnEthConf">
+                <i class="fa fa-link"></i>保&nbsp;&nbsp;存
+            </button>
+        </div>
+        <div class="setinfor-list">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <span style="width:215px; text-align:right;display:inline-block;">IP地址:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtEthIP" datatype="ip" errormsg="必须输入有效的IP" placeholder="(格式：192.168.1.1)" title="格式：192.168.1.1" />
+                    </div>
+                    <div class="col-md-6">
+                        <span style="width:215px; text-align:right;display:inline-block;">服务器、工作站数据采集服务端口:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtServerPort" data-id="$elementId$_txtServerPort" datatype="ip" errormsg="必须输入有效的服务器、工作站数据采集服务端口" placeholder="(格式：1-65535)" title="(格式：1-65535)" />
+                    </div>
+                    <div class="col-md-6">
+                        <span style="width:215px; text-align:right;display:inline-block;">子网掩码:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtSubnet" datatype="subnet" errormsg="必须输入有效的子网掩码" placeholder="(格式：255.255.255.0或24)" title="格式：255.255.255.0或24" />
+                    </div>
+                    <div class="col-md-6">
+                        <span style="width:215px; text-align:right;display:inline-block;">安全防护设备数据采集服务端口:</span>
+                        <input type="text" class="setinfor-input" id="$elementId$_txtProtectPort" data-id="$elementId$_txtProtectPort" datatype="subnet" errormsg="必须输入有效的安全防护设备数据采集服务端口" placeholder="(格式：1-65535)" title="(格式：1-65535)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="$elementId$_txtRouteConf" style="display:none;">
+        <div class="row">
+            <div style="background: #fff;padding: 20px;margin: 0px 5px;">
+                <div class="filter-box row">
+                    <div class="col-sm-12 col-md-3" style="display:none;">
+                        <div class="form-group">
+                            <label>IP类型:</label>
+                            <select class="form-control" id="$elementId$_txtIPtype" data-id="$elementId$_txtIPtype">
+                                <option value="4">IPV4</option>
+                                <option value="6">IPV6</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="form-group">
+                            <label style="min-width: 81px;">目的IP/掩码:</label>
+                            <input class="form-control input-feedback" placeholder="格式：192.168.0.1/24" type="text" data-id="$elementId$_txtIPMask" id="$elementId$_txtIPMask" placeholder="" title=""/>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4">
+                        <div class="form-group">
+                            <label>下一跳:</label>
+                            <input class="form-control input-feedback" placeholder="格式：192.168.1.1" type="text" data-id="$elementId$_txtNextGateway" id="$elementId$_txtNextGateway" placeholder="" title=""/>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-1">
+                        <button type="button" class="btn btn-primary" data-id="$elementId$_btnAdd" id="$elementId$_btnAdd"  style="float:right;">
+                            <i class="fa fa-plus"></i>添加
+                        </button>
+                    </div>
+                </div>
+                <div class="stable-toolbar row button-box">
+                    <button class="btn btn-info btn-sm" data-id="$elementId$_delBtn" id="$elementId$_delBtn" >
+                        <i class="fa fa-trash-o"></i>删除
+                    </button>
+                </div>
+                <div class="row-table-box">
+                    <table class="table table-hover table-striped" data-id="$elementId$_RuleList" id="$elementId$_RuleList">
+                        <thead>
+                        <tr>
+                            <th class="th-check">
+                                <input class="chinput" type="checkbox" id="$elementId$_selectAll">
+                                <label for="$elementId$_selectAll"></label>全选
+                            </th>
+                            <th>目的IP/掩码</th>
+                            <th>下一跳</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row pagination-custom">
+                    <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

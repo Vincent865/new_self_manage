@@ -1,0 +1,74 @@
+<div class="row iptables-row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">包过滤</li>
+        </ul>
+        <!--<span class="modetip">当前为全通模式，防护规则仅支持编辑，若要生效请切换至验证模式或者防护模式。</span>-->
+    </div>
+    <div class="row-cutcontent">
+        <div class="row-setting">
+            <div class="row-setting-title" id="$elementId$_packetBtns">
+                全局包过滤策略配置 ( 当前配置: <span>缺省丢弃</span>)
+                <button class="btn btn-primary btn-sm pull-right">
+                    <i class="fa fa-edit"></i>修改
+                </button>
+                <!--<button class="btn btn-danger btn-sm pull-right">
+                    取消
+                </button>
+                <button class="btn btn-primary btn-sm pull-right">
+                    确认
+                </button>-->
+            </div>
+            <div class="setinfor-list">
+                <input type="radio" class="dxinput" name="packetFilter" value="1" id="$elementId$_packetFilter0" checked/>
+                <label for="$elementId$_packetFilter0"></label><span>缺省允许</span>
+                <input type="radio" class="dxinput" name="packetFilter" value="0" id="$elementId$_packetFilter1"/>
+                <label for="$elementId$_packetFilter1"></label><span>缺省丢弃</span>
+            </div>
+        </div>
+        <hr />
+        <div class="stable-toolbar row button-box">
+            <button class="btn btn-info btn-sm" id="$elementId$_addRuleBtn">
+                <i class="fa fa-plus"></i>新增
+            </button>
+            <button class="btn btn-info btn-sm" id="$elementId$_delRuleBtn">
+                <i class="fa fa-trash-o"></i>删除
+            </button>
+            <button class="btn btn-info btn-sm" id="$elementId$_insertRuleBtn">
+                <i class="fa fa-level-down"></i>插入
+            </button>
+            <button class="btn btn-info btn-sm" id="$elementId$_moveRuleBtn">
+                <i class="fa fa-arrows"></i>移动
+            </button>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" id="$elementId$_packetFilterList">
+                <thead>
+                <tr>
+                    <th class="th-check">
+                        <input type="checkbox" class="chinput" id="$elementId$_selectAll">
+                        <label for="$elementId$_selectAll" ></label>全选
+                    </th>
+                    <th>规则名</th>
+                    <th>描述</th>
+                    <th>源IP地址</th>
+                    <th>源端口</th>
+                    <th>输入接口</th>
+                    <th>目的IP地址</th>
+                    <th>输出接口</th>
+                    <th>服务</th>
+                    <th>动作</th>
+                    <th>启用状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+            </div>
+        </div>
+    </div>
+</div>

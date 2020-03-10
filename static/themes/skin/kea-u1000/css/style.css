@@ -1,0 +1,481 @@
+/**************************************************header css**************************************************/
+.header {
+    height: 72px;
+    padding: 10px;
+    width: calc( 100% - 190px);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    background: url(../images/header_bg.png) no-repeat #5E8CE1;
+}
+.systemtime {
+    line-height: 14px;
+    font-size: 12px;
+    color: #ffffff;
+    padding-top: 9px;
+}
+.userinfor {
+    height: 36px;
+    line-height: 28px;
+    padding: 5px;
+    float: right;
+    border-radius: 5px;
+    background: #C1D3F4;
+    margin-top: 10px;
+}
+.userinfor li {
+    float: left;
+    font-size: 14px;
+    margin: 0px 10px;
+    color: #677DCE;
+    position:relative;
+}
+.userinfor li i {
+    font-size: 18px;
+}
+.userinfor .color-problem {
+    color: #ef7932;
+    animation:alert-fadeIn 1s infinite;
+    -moz-animation:alert-fadeIn 1s infinite; /* Firefox */
+    -webkit-animation:alert-fadeIn 1s infinite; /* Safari and Chrome */
+    -o-animation:alert-fadeIn 1s infinite; /* Opera */
+}
+.userinfor .h-seperate:after {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 12px;
+    background: #536192;
+    top: 8px;
+    right: -10px;
+}
+
+@keyframes alert-fadeIn{ 
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+.userinfor .out-system {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+    background: #677DCE;
+    color: #fff;
+    text-align: center;
+}
+/**************************************************nav css**************************************************/
+.nav { 
+  display: inline-block; 
+  width: 190px; 
+  height: 100%; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #283A77; 
+  background-image: url(../images/nav_bg.png);
+  background-repeat: no-repeat; 
+  background-position: bottom;
+  overflow: auto;
+  overflow-x:hidden; 
+}
+.logo {
+  width: 190px;
+  height: 72px;
+  background: #141B34;
+  text-align: center;
+  line-height: 72px;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+.nav-list {
+  width: 190px;
+  margin-top: 72px;
+
+}
+.nav-list .nav-title {
+    display: block;
+    line-height: 46px;
+    font-size: 14px;
+    color: #fff;
+}
+.nav-list i {
+  margin-right: 10px;
+  margin-left: 30px;
+}
+.nav-list .chevron-down {
+    margin-top: 18px;
+    font-size: 10px;
+    margin-right: 20px;
+}
+.nav-list .active {
+  border-left: 3px #FFFFFF solid;  
+  background: #548AE0;
+}
+.second-nav {
+  display:none;
+  background: #0e1652;
+  color: #ffffff;
+}
+.second-nav .second-nav-list {
+  margin-left: 36px;
+  font-size: 0.9em;
+  border-left: 2px #4a5864 solid;
+  padding-bottom: 8px;
+}
+.second-nav .second-nav-list li {
+  font-size: 13px;
+  position: relative;
+  line-height: 46px;
+  color: #fff;
+}
+.second-nav .second-nav-list li:hover {
+  color: #668aee;
+}
+.second-nav .second-nav-list li.on {
+  color: #668aee;
+}
+.second-nav .second-nav-list li:before{
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background: #4a5864;
+  top: 22px;
+  left: 0;
+}
+.second-nav .second-nav-list li i {
+  margin-left: 15px;
+  margin-right: 5px;
+}
+/**************************************************index css********************************************/
+.row-four {
+    padding: 5px;
+}
+.row-four section {
+    height: 110px;
+    background: #fff;
+    box-shadow: 1px 1px 1px #BDBDBD;
+}
+.row-three {
+    padding: 5px;
+}
+.row-three .chart-content {
+    height: 200px;
+    background: #fff !important;
+    box-shadow: 1px 1px 1px #BDBDBD;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+}
+.row-three .chart-content select {
+    width: 130px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.row-event {
+    padding: 5px;
+}
+.row-event section {
+    height: 120px;
+    padding: 15px;
+    color: #fff;
+    box-shadow: 1px 1px 1px #BDBDBD;
+}
+.event-box {
+    width: calc( 100% - 410px); 
+    float: left;
+}
+.event-title {
+    font-size: 18px;
+}
+.event-title i {
+    margin-right: 10px;
+}
+.event-number {
+    display: block;
+    text-align: right;
+    font-size: 3rem;
+    line-height: 70px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding-right: 15px;
+}
+.socket {
+    margin: 5px;
+    width: 400px;
+    height: 120px;
+    float: right;
+}
+.socket-content {
+    height: 100%;
+    background: url(../images/socket-portbox-bg.png) no-repeat center #5187D6;
+}
+.socket-content .portbox {
+    width: 370px;
+    height: 40px;
+    padding: 0px 105px;
+    font-size: 12px;
+    color: #ffffff;
+    margin: 0px auto; 
+}
+.socket-content .portbox li { 
+    line-height: 36px; 
+    text-align: right; 
+    float: left; 
+    margin: 0px 10px;
+}
+.socket-content .portbox li img {
+    margin-left: 5px;
+}
+.socket-content .jackbox {
+    height: 80px;
+    font-size: 0.85em;
+    color: #ffffff;
+    width: 400px;
+    margin: 0 auto;
+    padding: 0px 95px;
+}
+.socket-content .jackbox li {
+    float: left; 
+    margin: 10px 5px 0px;
+    text-align: center;
+    position: relative;
+}
+.socket-content .jackbox li p {
+    margin-bottom: 3px;
+}
+.jackbox-box {
+    position: absolute;
+    width: 48px;
+    height: 6px;
+    top: -5px;
+    left: 20px;
+    line-height: 2px;
+    border: 1px #fff solid;
+    border-bottom: 0;
+}
+.jackbox-box .jackbox-title {
+    display: inline-block;
+    background: #5187D6;
+    top: -1px;
+    left: 11px;
+    padding: 0px 3px;
+    height: 12px;
+    position: absolute;
+}
+.event-disk {
+    background: #3d489a;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    color: #fff;
+    padding: 0px 10px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.event-disk .disk-dic { 
+    display: inline-block; 
+    min-width: 90px; 
+    text-align: center; 
+    margin:5px 20px 0px 10px;
+    padding: 0px 5px;
+    height: 22px;
+    line-height: 22px; 
+}
+.event-disk .disk-wrong { 
+    background: #e63e3e;
+}
+.event-disk .disk-ok { 
+    background: #2cbd20;
+}
+/**************************************************event css**************************************************/
+.icon-box {
+  display: inline-block;
+  width: 25%;
+  line-height: 110px;
+  text-align: center;
+}
+.icon-box i {
+  font-size: 30px;
+  color: #fff;
+} 
+.ev-box {
+  float: right;
+    padding: 11px;
+    width: 75%;
+    font-size: 1.2em;
+    color: #6f7b91;
+}
+.ev-box .number {
+  font-size: 2em;
+    color: #626f87;
+    font-weight: 700;
+    padding: 10px 0px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+/**************************************************audit css**************************************************/
+.row-flowport-box {
+    position: relative;
+    height: 280px;
+    margin: 15px 0px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px #B3C1EA solid;
+    overflow: hidden;
+}
+.flow_title {
+    color: #353744;
+}
+.row-flowratio-box {
+    position: relative;
+    height: 280px;
+    margin: 15px 0px;
+    padding: 15px;
+    background: #ffffff;
+    border: 1px #B3C1EA solid;
+    overflow: hidden;
+}
+.row-flowratio-box select {
+    width: 130px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+/**************************************************nettopo css**************************************************/
+.nettopo-content {
+    background: #fff;
+    height: 710px;
+}
+.nettopo-box {
+    height:100%;
+    background: url(../images/nettopo-bg.png) repeat #fff;
+}
+.nettopo-inputbox {
+    height:100%; 
+    background:#F4F4F4;
+    box-shadow: 5px 0px 0px #A8B7CA inset;
+    padding: 0px 0px 0px 5px;
+}
+.net-title {
+    height: 30px;
+    line-height: 30px;
+    font-size: 1em;
+    text-align: center;
+    color: #4667c4;
+    background: #d0dbeb;
+}
+.net-state {
+    line-height: 30px;
+    text-align: center;
+    border-bottom: 1px #D0DBEB solid;
+}
+.net-state img {
+    margin: 0px 8px;
+}
+.device-img {
+    line-height: 90px;
+    text-align: center;
+    overflow: hidden; 
+}
+.net-inputbox {
+    padding: 15px;
+}
+.netlabel {
+    display: block;
+    line-height: 30px;
+    margin: 0;
+    font-weight: normal;
+}
+.netiput {
+    width: 100%;
+    height: 30px;
+    border-radius: 3px;
+    background: #ffffff;
+    border: 1px #81a2fe solid;
+    padding: 0px 5px;
+    margin-bottom: 8px;
+}
+.net-inputbox button {
+    float: right;
+    width: 100px;
+    margin-top: 20px;
+}
+/**************************************************device css**************************************************/
+.device-title {
+    font-size: 1.2em;
+    color: #4667c4;
+    line-height: 30px;
+    margin-bottom: 15px;
+}
+.checkbox-packet {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+.checkbox-packet li {
+    float: left;
+}
+@media (max-width: 991px) {
+    .socket {
+        padding: 5px;
+        height: 130px;
+        width: 100%;
+        margin: 0px;
+    }
+    .event-box {
+        width: 100%;
+    }
+    .nettopo-inputbox { 
+        height: 560px;
+        background:#F4F4F4;
+        box-shadow: 0px 5px 0px #A8B7CA inset;
+        padding: 5px 0px 0px 0px;
+    }
+    .net-inputbox button {
+        width: 100%;
+        margin: 20px 0px;
+    }
+    .style-sm {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

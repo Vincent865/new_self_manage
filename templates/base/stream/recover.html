@@ -1,0 +1,23 @@
+﻿<div class="tabdiv">
+    <button class="butchange refresh" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">刷新</button>
+    <button class="but butip" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">过滤条件</button>
+    <button class="but butser" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">搜索</button>
+    <input type="text" class="inputip float_right" data-id="$elementId$_txtKeywords" id="$elementId$_txtKeywords" />
+</div>
+<div class="filtrate" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+    <div class="tabdiv">
+        <label>开始时间: </label>
+        <input type="text" class="Wdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', maxDate: '#F{$dp.$D(\'$elementId$_txtEndDateTime\')}' })" data-id="$elementId$_txtStartDateTime" id="$elementId$_txtStartDateTime" />
+        <label>结束时间: </label>
+        <input type="text" class="Wdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', minDate: '#F{$dp.$D(\'$elementId$_txtStartDateTime\')}' })" data-id="$elementId$_txtEndDateTime" id="$elementId$_txtEndDateTime" />
+    </div>
+    <div class="tabdiv">
+        <label>IP: </label><input type="text" class="inputip" data-id="$elementId$_txtIP" id="$elementId$_txtIP" />
+        <label>协议: </label><input type="text" class="inputip" data-id="$elementId$_txtProtocol" id="$elementId$_txtProtocol" />
+    </div>
+</div>
+<div class="tabel_div">
+    <table data-id="$elementId$_tdStreamList" id="$elementId$_tdStreamList"></table>
+    <div class="allevent">总共 <span style="color:#ff8761;" data-id="$elementId$_lblTotalStream" id="$elementId$_lblTotalStream"> 0</span> 个数据</div>
+</div>
+<div class="evpage" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent"></div>

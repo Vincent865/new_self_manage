@@ -1,0 +1,100 @@
+<div class="dialog-content" id="$elementId$_ipTableDetail">
+    <ul id="$elementId$_detailForm" style="margin-bottom:0px;">
+        <li>
+            <label>规则名称:</label>
+            <input type="text" value="" title="格式：支持字母、数字、中文与下划线" placeholder="格式：支持字母、数字、中文与下划线" maxlength="128" />
+            <span style="color:red">*</span>
+        </li>
+        <li>
+            <label>描述:</label>
+            <input type="text" value="" title="描述信息" placeholder="描述信息" maxlength="128" />
+        </li>
+    </ul>
+    <ul id="$elementId$_detailForm1" class="addtpl" style="margin-bottom:0px;padding-top: 0px;">
+        <li><label>特征码：</label><input type="text" value="" style="width:170px;" maxlength="128" placeholder="请输入偶数位16进制数值" /></li>
+        <li><label>起始偏移：</label><input disabled style="border-color:#ccc;background-color:#eee;" placehoder="范围：0-1500" type="text" value="" maxlength="1500"/><span class="warningtip0" style="color:red;display:none;">*</span></li>
+        <li><label>匹配深度：</label><input disabled style="border-color:#ccc;background-color:#eee;" placehoder="范围：0-1500" type="text" value="" maxlength="1500"/><span class="warningtip0" style="color:red;display:none;">*</span></li>
+    </ul>
+    <ul id="$elementId$_detailForm2" class="addtpl" style="margin-bottom:0px;padding-top: 0px;">
+        <li><label>特征码：</label><input type="text" value="" style="width:170px;" maxlength="128" placeholder="请输入偶数位16进制数值" /></li>
+        <li><label>起始偏移：</label><input disabled style="border-color:#ccc;background-color:#eee;" placehoder="范围：0-1500" type="text" value="" maxlength="1500"/><span class="warningtip1" style="color:red;display:none;">*</span></li>
+        <li><label>匹配深度：</label><input disabled style="border-color:#ccc;background-color:#eee;" placehoder="范围：0-1500" type="text" value="" maxlength="1500"/><span class="warningtip1" style="color:red;display:none;">*</span></li>
+    </ul>
+    <ul id="$elementId$_detailForm3" class="addtpl" style="margin-bottom:0px;padding-top: 0px;">
+        <li><label>特征码：</label><input type="text" value="" style="width:170px;" maxlength="128" placeholder="请输入偶数位16进制数值" /></li>
+        <li><label>起始偏移：</label><input disabled style="border-color:#ccc;background-color:#eee;" placehoder="范围：0-1500" type="text" value="" maxlength="1500"/><span class="warningtip2" style="color:red;display:none;">*</span></li>
+        <li><label>匹配深度：</label><input disabled style="border-color:#ccc;background-color:#eee;" placehoder="范围：0-1500" type="text" value="" maxlength="1500"/><span class="warningtip2" style="color:red;display:none;">*</span></li>
+    </ul>
+    <div class="stable-toolbar row button-box" id="$elementId$_detailFormBtns">
+        <button class="btn btn-info btn-sm">
+            <i class="fa fa-plus"></i>新增
+        </button>
+        <button class="btn btn-info btn-sm">
+            <i class="fa fa-trash-o"></i>删除
+        </button>
+    </div>
+    <div id="$elementId$_detailTable">
+        <div class="row-table-box" style="margin:0;">
+            <ul style="margin-bottom:0px;" class="ruletpl">
+                <!-- <li>
+                    <span><label>偏移：</label><input type="text" value="" /></span>
+                    <span><label>长度：</label><input type="text" value="" /></span>
+                    <span><label>字段名：</label><input type="text" value="" style="width: 162px;"/></span>
+                    <span><label>内容描述：</label>
+                        <select>
+                            <option value="">模板1</option>
+                        </select>
+                    </span>
+                </li>
+                <li>
+                    <span><label>偏移：</label><input type="text" value="" /></span>
+                    <span><label>长度：</label><input type="text" value="" /></span>
+                    <span><label>字段名：</label><input type="text" value="" style="width: 162px;"/></span>
+                    <span><label>内容描述：</label>
+                        <select>
+                            <option value="">模板1</option>
+                        </select>
+                    </span>
+                </li>
+                <li>
+                    <span><label>偏移：</label><input type="text" value="" /></span>
+                    <span><label>长度：</label><input type="text" value="" /></span>
+                    <span><label>字段名：</label><input type="text" value="" style="width: 162px;"/></span>
+                    <span><label>内容描述：</label>
+                        <select>
+                            <option value="">模板1</option>
+                        </select>
+                    </span>
+                </li>
+                <li>
+                    <span><label>偏移：</label><input type="text" value="" /></span>
+                    <span><label>长度：</label><input type="text" value="" /></span>
+                    <span><label>字段名：</label><input type="text" value="" style="width: 162px;"/></span>
+                    <span><label>内容描述：</label>
+                        <select>
+                            <option value="">模板1</option>
+                        </select>
+                    </span>
+                </li>
+                <li>
+                    <span><label>偏移：</label><input type="text" value="" /></span>
+                    <span><label>长度：</label><input type="text" value="" /></span>
+                    <span><label>字段名：</label><input type="text" value="" style="width: 162px;"/></span>
+                    <span><label>内容描述：</label>
+                        <select>
+                            <option value="">模板1</option>
+                        </select>
+                    </span>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+    <div class="stable-toolbar row button-box" id="$elementId$_detailCtrlBtns">
+        <button class="btn btn-info btn-sm">
+            确认
+        </button>
+        <button class="btn btn-danger btn-sm">
+            取消
+        </button>
+    </div>
+</div>

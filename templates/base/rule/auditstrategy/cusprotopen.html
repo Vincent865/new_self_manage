@@ -1,0 +1,49 @@
+<div class="dialog-content" id="$elementId$_ipTableDetail">
+    <ul id="$elementId$_detailForm">
+        <li>
+            <label>协议名称:</label>
+            <input type="text" value="" title="格式：支持字母、数字、中文与下划线" placeholder="格式：支持字母、数字、中文与下划线" maxlength="64" />
+            <span style="color:red">*</span>
+            <!-- <input type="checkbox" checked class="chinput" id="iptable_open" />
+            <label for="iptable_open" style="margin-left:25px;"></label>启用 -->
+        </li>
+        <li>
+            <label>协议类型:</label>
+            <select class="addrtype" name="">
+                <option value="TCP">TCP</option>
+                <option value="UDP">UDP</option>
+            </select>
+        </li>
+        <li>
+            <label>端口:</label>
+            <input type="text" placeholder="值范围为1-65535" />
+            <span style="color:red">*</span>
+        </li>
+        <li>
+            <label>客户端类型:</label>
+            <select class="client_type"></select>
+        </li>
+        <li>
+            <label>服务端类型:</label>
+            <select class="server_type"></select>
+        </li>
+        <li style="height:134px;">
+            <label>规则模板:</label>
+            <select multiple class="addrtype">
+            </select>
+            <span class="showtpl">
+                <ul class="showtpllist">
+                </ul>
+            </span>
+        </li>
+    </ul>
+    <span class="tipform" style="color:#ff0000;display:none;">请输入规则名</span>
+    <div class="stable-toolbar row button-box" id="$elementId$_detailCtrlBtns">
+        <button class="btn btn-info btn-sm">
+            确认
+        </button>
+        <button class="btn btn-danger btn-sm">
+            取消
+        </button>
+    </div>
+</div>

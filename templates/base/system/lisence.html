@@ -1,0 +1,68 @@
+﻿<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active">授权许可</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent">
+        <div class="row-setting">
+            <div class="row-setting-title">
+                授权设备ID
+            </div>
+            <div class="setinfor-list" style="overflow:hidden;">
+                <ul>
+                    <li>
+                        <label for="$elementId$_getDevCode" class="btn btn-info btn-sm" id="$elementId$_getDevCode"
+                            data-id="$elementId$_getDevCode">
+                            <i class="fa fa-id-card"></i> 获取机器码
+                        </label>
+                        <input type="button" name="$elementId$_getDevCode" id="$elementId$_getDevCode"
+                            data-id="$elementId$_getDevCode"
+                            style="position:absolute;width:1px;z-index:-999;filter:alpha(opacity=10);-moz-opacity:0.01;-khtml-opacity: 0.01; opacity: 0.01; " />
+                        <small class="dic" id="$elementId$_codeinfo" data-id="$elementId$_codeinfo">请点击获取</small>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form action="" method="post" id="$elementId$_formUpload" enctype="multipart/form-data">
+            <div class="row-setting">
+                <div class="row-setting-title">
+                    授权信息上传
+                    <button type="button" class="btn btn-primary btn-sm pull-right" id="$elementId$_btnUpgrade"
+                        data-id="$elementId$_btnUpgrade">
+                        <i class="fa fa-cloud-upload"></i>授权
+                    </button>
+                </div>
+                <div class="setinfor-list">
+                    <ul>
+                        <li>
+                            <label for="$elementId$_fileUpload" class="btn btn-info btn-sm" id="$elementId$_btnUpload"
+                                data-id="$elementId$_btnUpload">
+                                <i class="fa fa-folder-open"></i> 请选择授权文件
+                            </label>
+                            <input type="file" name="$elementId$_filename" id="$elementId$_fileUpload"
+                                data-id="$elementId$_fileUpload"
+                                style="position:absolute;width:1px;z-index:-999;filter:alpha(opacity=10);-moz-opacity:0.01;-khtml-opacity: 0.01; opacity: 0.01; " />
+                            <small class="dic" id="$elementId$_errUpload"
+                                data-id="$elementId$_errUpload">请选择授权文件</small>
+                        </li>
+                    </ul>
+                    <div class="clearfix">
+                        <input type="hidden" data-id="$elementId$_hfLoginUser" name="loginuser" id="loginuser" />
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row-setting">
+            <div class="row-setting-title">
+                授权信息
+            </div>
+            <div class="setinfor-list" style="overflow:hidden;">
+                <ul style="margin-left:20px;">
+                    <li>授权期限：<span id="$elementId$_expires">未授权</span></li>
+                    <li>授权功能：<span id="$elementId$_func">未授权</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

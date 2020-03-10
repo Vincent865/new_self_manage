@@ -1,0 +1,121 @@
+﻿
+<div class="row">
+    <div class="row-cutbox">
+        <ul>
+            <li class="active" data-id="$elementId$_blacklist">漏洞库</li>
+        </ul>
+    </div>
+    <div class="row-cutcontent" data-id="$elementId$_knowBlacklistHolder" id="$elementId$_knowBlacklistHolder">
+        <div class="stable-toolbar row button-box">
+            <div class="col-sm-12 col-md-8 left-toolbar">
+                <form method="post" id="$elementId$_formUpload" enctype="multipart/form-data">
+                    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRefresh" id="$elementId$_btnRefresh">
+                        <i class="fa fa-refresh"></i>刷新
+                    </button>
+                    <!--<label class="btn btn-info btn-sm lab" for="$elementId$_fileUpload" id="$elementId$_btnUpload" data-id="$elementId$_btnUpload">
+                        <i class="fa fa-level-down"></i>导入
+                    </label>-->
+                    <button type="button" class="btn btn-info btn-sm" id="$elementId$_btnEnableAll" data-id="$elementId$_btnEnableAll">
+                        <i class="fa fa-check-square-o"></i>启用所有
+                    </button>
+                    <button type="button" class="btn btn-info btn-sm" id="$elementId$_btnDisableAll" data-id="$elementId$_btnDisableAll">
+                        <i class="fa fa-minus-circle"></i>禁用所有
+                    </button>
+                    <input type="file" name="$elementId$_fileUpload" id="$elementId$_fileUpload" data-id="$elementId$_fileUpload" style="position:absolute;width:1px;filter:alpha(opacity=10);-moz-opacity:0.01;-khtml-opacity: 0.01; opacity: 0.01; " />
+
+
+                    <input type="hidden" name="loginuser" id="loginuser" />
+                </form>
+            </div>
+            <div class="col-sm-12 col-md-2 right-toolbar" style="float:right;">
+                <!--<div class="form-group margin-none">
+                    <label>操作全部：</label>
+                    <select class="form-control">
+                        <option value="">---请选择---</option>
+                        <option value="">设为通过</option>
+                        <option value="">设为阻断</option>
+                    </select>
+                </div>-->
+                <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+                    <i class="fa fa-filter"></i>高级搜索
+                </button>
+            </div>
+
+            <!--<div class="col-sm-12 col-md-2 right-toolbar">
+                <div class="form-group margin-none">
+                    <label>过滤：</label>
+                    <select class="form-control" id="$elementId$_ddlFilter" data-id="$elementId$_ddlFilter">
+                        <option value="">全部</option>
+                        <option value="0">禁用</option>
+                        <option value="1">启用</option>
+                    </select>
+                </div>
+            </div>-->
+        </div>
+        <div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>漏洞名称</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDeviceName" id="$elementId$_txtDeviceName" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>漏洞类型</label>
+                    <select class="form-control" data-id="$elementId$_ddlDeviceType" id="$elementId$_ddlDeviceType">
+                        <option value="" selected="selected">全部</option>
+                        <option value="1">缓冲区溢出攻击</option>
+                        <option value="2">代码执行攻击</option>
+                        <option value="3">僵尸网络攻击</option>
+                        <option value="4">扫描探测攻击</option>
+                        <option value="5">未知活动攻击</option>
+                        <option value="6">跨站脚本攻击</option>
+                        <option value="7">蠕虫病毒攻击</option>
+                        <option value="8">SQL注入攻击</option>
+                        <option value="9">信息泄露攻击</option>
+                        <option value="10">拒绝服务攻击</option>
+                        <option value="11">木马攻击</option>
+                        <option value="12">工控漏洞攻击</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>漏洞状态</label>
+                    <select class="form-control" data-id="$elementId$_ddlFilter" id="$elementId$_ddlFilter">
+                        <option value="" selected="selected">全部</option>
+                        <option value="0">禁用</option>
+                        <option value="1">启用</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <div class="col-sm-12 col-md-12 right-toolbar">
+                <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" data-id="$elementId$_tdBlacklistList" id="$elementId$_tdBlacklistList">
+                <thead>
+                    <tr>
+                        <th class="w-50">序号</th>
+                        <th>漏洞名称</th>
+                        <th>发布时间</th>
+                        <th>启用状态</th>
+                        <th>事件处理</th>
+                        <th>危险等级</th>
+                        <th>漏洞类型</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+            </div>
+        </div>
+    </div>
+</div>

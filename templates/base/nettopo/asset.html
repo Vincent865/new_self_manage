@@ -1,0 +1,132 @@
+<div class="stable-toolbar row button-box">
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnAddDevice" id="$elementId$_btnAddDevice">
+        <i class="fa fa-plus"></i>新增设备
+    </button>
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnRemove" id="$elementId$_btnRemove">
+        <i class="fa fa-trash-o"></i>删除
+    </button>
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnDeviceType" id="$elementId$_btnDeviceType">
+        <i class="fa fa-tasks"></i>自定义设备类型
+    </button>
+    <button type="button" class="btn btn-info btn-sm" data-id="$elementId$_btnExport" id="$elementId$_btnExportList">
+        <i class="fa fa-share"></i>导出全部数据
+    </button>
+    <button class="btn btn-info btn-sm" data-id="$elementId$_btnImport" id="$elementId$_btnImportList">
+        <i class="fa fa-reply"></i>导入数据
+    </button>
+    <!--<button class="btn btn-info btn-sm" data-id="$elementId$_btnExportVendor" id="$elementId$_btnExportVendor">
+        <i class="fa fa-share"></i>导出设备厂商
+    </button>
+    <button class="btn btn-info btn-sm" data-id="$elementId$_btnImportVendor" id="$elementId$_btnImportVendor">
+        <i class="fa fa-reply"></i>导入设备厂商
+    </button>-->
+    <form id="importListForm" style="display: none">
+        <input type="file" style="display: none" name="file" id="$elementId$_file" accept=".csv"/>
+        <input type="text" style="display: none" name="loginuser">
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+    <form id="importVendorForm" style="display: none">
+        <input type="file" style="display: none" name="vendor_file" id="$elementId$_Vendorfile" accept=".json"/>
+        <input type="text" style="display: none" name="loginuser">
+        <input type="submit" name="submit" value="Submit"/>
+    </form>
+    <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+        <i class="fa fa-filter"></i>高级搜索
+    </button>
+</div>
+<div class="filter-box row" style="display:none;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>设备名</label>
+            <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDeviceName" id="$elementId$_txtDeviceName" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>IP地址</label>
+            <input class="form-control input-feedback" placeholder="(格式：192.168.1.1)" title="(格式：192.168.1.1)" type="text" data-id="$elementId$_txtIP" id="$elementId$_txtIP" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>MAC地址</label>
+            <input class="form-control input-feedback" type="text" placeholder="(格式：1A:2B:3C:66:DE:88)" title="(格式：1A:2B:3C:66:DE:88)" data-id="$elementId$_txtMAC" id="$elementId$_txtMAC" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>厂商信息</label>
+            <input class="form-control input-feedback" type="text" id="$elementId$_txtVenderInfo" data-id="$elementId$_txtVenderInfo" />
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>设备类型</label>
+            <select class="form-control input-feedback" type="text" id="$elementId$_txtDeviceType" data-id="$elementId$_txtDeviceType">
+                <option value="">所有</option>
+                <option value="0">未知</option>
+                <option value="1">PC</option>
+                <option value="2">工程师站PC</option>
+                <option value="3">操作员PC</option>
+                <option value="4">PLC</option>
+                <option value="5">SCADA</option>
+                <option value="6">HMI</option>
+                <option value="7">网络设备</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>接入状态</label>
+            <select class="form-control input-feedback" type="text" id="$elementId$_txtAuthStatus" data-id="$elementId$_txtAuthStatus">
+                <option value="">所有</option>
+                <option value="0">正常接入</option>
+                <option value="1">非法接入</option>
+            </select>
+        </div>
+    </div>
+    <div class="col-sm-12 col-md-4">
+        <div class="form-group">
+            <label>是否加入拓扑</label>
+            <select class="form-control input-feedback" data-id="$elementId$_txtIsTopo" id="$elementId$_txtIsTopo">
+                <option value="">所有</option>
+                <option value="0">否</option>
+                <option value="1">是</option>
+            </select>
+        </div>
+    </div>
+    <hr>
+    <div class="col-sm-12 col-md-12 right-toolbar">
+        <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+            <i class="fa fa-search"></i>搜索
+        </button>
+    </div>
+</div>
+<div class="row-table-box">
+    <table class="table table-hover table-striped topotable" data-id="$elementId$_tdAssetList" id="$elementId$_tdAssetList">
+        <thead>
+        <tr>
+            <th class="th-check" style="width:80px">
+                <input type="checkbox" class="chinput" id="$elementId$_selectAll">
+                <label for="$elementId$_selectAll" ></label>全选
+            </th>
+            <th>设备名</th>
+            <th>IP</th>
+            <th>MAC</th>
+            <th>厂商信息</th>
+            <th style="width:90px">设备类型</th>
+            <th>设备型号</th>
+            <!--<th>协议</th>-->
+            <th style="width:90px">是否加入</th>
+            <th style="width:90px">接入状态</th>
+            <th style="width:280px">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+<div class="row pagination-custom">
+    <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+    </div>
+</div>

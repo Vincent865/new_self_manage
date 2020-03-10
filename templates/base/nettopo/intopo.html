@@ -1,0 +1,93 @@
+<div class="dialog-content">
+    <div id="$elementId$_intopo_dialog" class="row-table-box">
+        <div class="row-cutcontent" style="background: #f5f5f5;margin:0px;overflow:hidden;padding: 10px 20px;">
+            <button type="button" class="btn btn-primary pull-right" data-id="$elementId$_btnFilter" id="$elementId$_btnFilter">
+                <i class="fa fa-filter"></i>高级搜索
+            </button>
+        </div>
+        <div class="filter-box row" style="display:none;padding-top:0px;" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>源设备名</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtDeviceName" id="$elementId$_txtDeviceName" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>IP</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtIP" id="$elementId$_txtIP" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>MAC</label>
+                    <input class="form-control input-feedback" type="text" data-id="$elementId$_txtMAC" id="$elementId$_txtMAC" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>接入状态</label>
+                    <select class="form-control" data-id="$elementId$_txtAuthStatus">
+                        <option value="" selected="selected">全部</option>
+                        <option value="0">正常接入</option>
+                        <option value="1">非法接入</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>设备类型</label>
+                    <select class="form-control" data-id="$elementId$_txtDeviceType" id="$elementId$_txtDeviceType">
+                        <option value="" selected="selected">全部</option>
+                        <option value="0">未知</option>
+                        <option value="1">PC</option>
+                        <option value="2">工程师站PC</option>
+                        <option value="3">操作员站PC</option>
+                        <option value="4">PLC</option>
+                        <option value="5">RTU</option>
+                        <option value="6">HMI</option>
+                        <option value="7">网络设备</option>
+                    </select>
+                </div>
+            </div>
+            <hr style="margin-top:8px;">
+            <div class="col-sm-12 col-md-12 right-toolbar">
+                <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+        </div>
+        <div>
+            <table style="width:100%;">
+                <thead>
+                    <tr>
+                        <th style="width:70px;" class="th-check">
+                            <input type="checkbox" class="chinput" id="$elementId$_selectAll">
+                            <label for="$elementId$_selectAll" ></label>全选
+                        </th>
+                        <th style="width:280px;">设备名</th>
+                        <th style="width:260px;">IP</th>
+                        <th style="width:150px;">MAC</th>
+                        <th  style='width:150px'>接入状态</th>
+                        <th>设备类型</th>
+                        <!--<th>描述</th>-->
+                    </tr>
+                </thead>
+            </table>
+        </div>
+        <div style="height:360px;overflow-y:scroll;">
+            <table class="table table-hover table-striped" id="$elementId$_tdDeviceList" style="table-layout:fixed;">
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="button-box" id="$elementId$_intobtns">
+        <button class="btn btn-primary">
+            加入拓扑
+        </button>
+        <button class="btn btn-danger">
+            取消
+        </button>
+    </div>
+</div>

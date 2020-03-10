@@ -1,0 +1,66 @@
+﻿<div class="pops-box behaviordialog">
+    <div class="pops-content">
+        <ul class="pops-list-three">
+            <!--<li><b>协议类型：</b><span id="$elementId$_lblType" data-id="$elementId$_lblType"></span></li>-->
+            <li><b>起始时间：</b><span id="$elementId$_lblTime" data-id="$elementId$_lblTime"></span></li>
+            <li><b>设备名称：</b><span id="$elementId$_lblName" data-id="$elementId$_lblName"></span></li>
+            <li><b>端口：</b><span id="$elementId$_lblPort" data-id="$elementId$_lblPort"></span></li>
+            <li><b>IP地址：</b><span id="$elementId$_lblIP" data-id="$elementId$_lblIP"></span></li>
+            <li><b>MAC地址：</b><span id="$elementId$_lblMAC" data-id="$elementId$_lblMAC"></span></li>
+        </ul>
+        <hr />
+        <div class="filter-box row" data-id="$elementId$_divFilter" id="$elementId$_divFilter">
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>类型</label>
+                    <select name="$elementId$_txtType" id="$elementId$_txtType" class="form-control">
+                        <option value="">不限</option>
+                        <option value="1">PLC操作信息</option>
+                        <option value="2">PLC运行信息</option>
+                        <option value="3">OB组织块操作</option>
+                        <option value="4">FC功能块操作</option>
+                        <option value="5">FB功能块操作</option>
+                        <option value="6">DB数据块操作</option>
+                        <option value="7">内部变量操作</option>
+                        <option value="8">输入变量操作</option>
+                        <option value="9">输出变量操作</option>
+                        <option value="10">其他</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>开始时间</label>
+                    <input class="Wdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', maxDate: '#F{$dp.$D(\'$elementId$_txtEndDateTime\')}' })" data-id="$elementId$_txtStartDateTime" id="$elementId$_txtStartDateTime" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <div class="form-group">
+                    <label>结束时间</label>
+                    <input class="Wdate" onclick="WdatePicker({ dateFmt: 'yyyy-MM-dd HH:mm:ss', minDate: '#F{$dp.$D(\'$elementId$_txtStartDateTime\')}' })" data-id="$elementId$_txtEndDateTime" id="$elementId$_txtEndDateTime" />
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-1 right-toolbar">
+                <button type="button" class="btn btn-primary style-sm" data-id="$elementId$_btnSearch" id="$elementId$_btnSearch">
+                    <i class="fa fa-search"></i>搜索
+                </button>
+            </div>
+        </div>
+        <div class="row-table-box">
+            <table class="table table-hover table-striped" data-id="$elementId$_tdProtocolList" id="$elementId$_tdProtocolList">
+                <thead>
+                <tr>
+                    <th>记录时间</th>
+                    <th>类型</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+        <div class="row pagination-custom">
+            <div class="text-right col-xs-12" data-id="$elementId$_pagerContent" id="$elementId$_pagerContent">
+            </div>
+        </div>
+    </div>
+</div>
